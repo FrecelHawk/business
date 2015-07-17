@@ -1,8 +1,6 @@
 package cn.caregg.o2o.business.engine.http.base;
 
 
-import cn.caregg.o2o.business.app.BusinessApplication;
-import cn.caregg.o2o.business.utils.PhoneUtil;
 
 import com.lidroid.xutils.http.RequestParams;
 
@@ -29,8 +27,8 @@ public class RequestParamsByHeader extends RequestParams {
 	private void addHeaders() {
 		addHeader("Content-Type", "application/json");
 		addHeader("charset", "utf-8");
-		addHeader("Authorization", PhoneUtil.getTVIMEI(BusinessApplication.mContext));
-		addHeader("reqFrom", "2");
+//		addHeader("Authorization", PhoneUtil.getTVIMEI(BusinessApplication.mContext));
+//		addHeader("reqFrom", "2");
 	}
 	
 	
