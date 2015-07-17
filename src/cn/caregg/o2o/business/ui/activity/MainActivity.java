@@ -1,10 +1,10 @@
 package cn.caregg.o2o.business.ui.activity;
 
 import cn.caregg.o2o.business.R;
-import android.app.Activity;
+import cn.caregg.o2o.business.ui.base.BaseActivity;
 import android.os.Bundle;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
