@@ -26,6 +26,6 @@ public class TestActivity extends BaseActivity{
 	
 	
 	public void test(View view){
-		ActivityStartUtil.start(TestActivity.this, LoginActivity.class);
+		ActivityStartUtil.start(TestActivity.this, NavigationManagerActivity.class);
 	}
 }
