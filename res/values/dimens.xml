@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <dimen name="activity_marginTop">15dp</dimen>
+    <dimen name="common_select_bar_paddingRight">20dp</dimen>
+    <dimen name="navigation_top_font">20sp</dimen>
+</resources>

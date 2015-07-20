@@ -3,5 +3,33 @@
 
     <string name="app_name">business_carnest</string>
     <string name="hello_world">Hello world!</string>
-
+    <string name="todo">TODO</string>
+    <string name="_">你好</string>
+    <string name="phone_number">手机号</string>
+    <string name="login">登录</string>
+    <string name="forget_passwd">忘记密码？</string>
+    <string name="passwd">密码</string>
+    <string name="apply_account_describe">没有账号?请前往车蛋官方网站注册申请</string>
+    <string name="navigation">订单</string>
+    <string name="common_tab">Tab</string>
+    
+    
+     <!-- 底部文字 -->
+    <string-array name="tabTxt">
+           <item >首页</item>
+           <item >订单</item>
+           <item >账单</item>
+           <item >我的</item>
+    </string-array>
+    <!-- Fragment页面切换顺序必须对应底部导航 -->
+    <string-array name="main_fragment">
+          <item >cn.caregg.o2o.business.ui.fragment.HomePageFragment</item>
+          <item >cn.caregg.o2o.business.ui.fragment.OrderManagerFragment</item>
+          <item >cn.caregg.o2o.business.ui.fragment.BillManagerFragment</item>
+          <item >cn.caregg.o2o.business.ui.fragment.MyselfFragment</item>
+    </string-array>
+    <string name="business_envrionment">商家环境</string>
+    <string name="business_myself_phone_numer">手机号：%1$s</string>
+    <string name="business_name">上海百瑞洗车行</string>
+    
 </resources>
