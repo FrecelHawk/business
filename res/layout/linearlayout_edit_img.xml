@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent" 
+     android:gravity="center_horizontal"
+    >
+      <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/carnest_login_phone_bg" 
+            android:contentDescription="@string/todo"/>
+      <cn.caregg.o2o.business.ui.view.ClearEditText
+            android:id="@+id/login_edit_txt"
+            android:inputType="text|phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/edit_hint_font"
+            android:paddingLeft="10dp"
+            android:background="@drawable/carnest_login_phone_edit"
+            android:drawableRight="@drawable/clear_normal_list"
+            android:drawableEnd="@drawable/clear_normal_list" 
+            android:hint="@string/phone_number"/>
+</LinearLayout>

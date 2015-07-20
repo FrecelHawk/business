@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="test"
+        android:text="Button" />
+    
+  <!--   <cn.caregg.o2o.business.ui.view.ClearEditText
+		android:id="@+id/clearEditText"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="10dip"
+		android:paddingRight="8dip"
+		android:paddingTop="5dip"
+		android:paddingBottom="5dip"
+		android:hint="请输入手机号码"
+		android:background="@drawable/pay_widget_input"
+		android:drawableRight="@drawable/clear_normal_list" />
+ -->
+</LinearLayout>
