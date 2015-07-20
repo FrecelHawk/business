@@ -1,5 +1,6 @@
 package cn.caregg.o2o.business.engine.page.impl;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import cn.caregg.o2o.business.R;
 import cn.caregg.o2o.business.engine.page.inf.NavigationInf;
-import cn.caregg.o2o.business.ui.base.BaseActivity;
 
 /**
  * @ClassName: NavigationBar
@@ -26,7 +26,7 @@ public class NavigationBar implements NavigationInf {
 	
 	private ViewGroup viewGroup;
 	
-	private BaseActivity  activity;
+	private Activity  activity;
 	
 	public ImageView getLeftarrow() {
 		return leftarrow;
@@ -53,7 +53,7 @@ public class NavigationBar implements NavigationInf {
 	}
 
 	
-    public NavigationBar(ViewGroup viewGroup,BaseActivity activity) {
+    public NavigationBar(ViewGroup viewGroup,Activity activity) {
     	this.viewGroup = viewGroup;
     	this.activity = activity;
     	initalView();

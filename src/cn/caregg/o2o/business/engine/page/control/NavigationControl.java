@@ -1,4 +1,4 @@
-package cn.caregg.o2o.business.engine.page;
+package cn.caregg.o2o.business.engine.page.control;
 
 import cn.caregg.o2o.business.engine.page.inf.NavigationInf;
 
