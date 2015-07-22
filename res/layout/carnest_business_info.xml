@@ -7,6 +7,7 @@
     android:orientation="vertical" >
 
     <include 
+        android:id="@+id/top_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/carnest_top_navigation"/>
@@ -22,34 +23,40 @@
         <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/carnest_common_line" />
+            layout="@layout/carnest_common_horizontal_line" />
 
         <include
+            android:id="@+id/tab1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar2" />
 
         <include
+            android:id="@+id/tab2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar2" />
 
         <include
+            android:id="@+id/tab3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar2" />
 
         <include
+            android:id="@+id/tab4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar2" />
 
         <include
+            android:id="@+id/tab5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar2" />
 
         <include
+            android:id="@+id/tab6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             layout="@layout/carnest_common_select_bar" />
@@ -57,7 +64,7 @@
         <include
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            layout="@layout/carnest_common_line" />
+            layout="@layout/carnest_common_horizontal_line" />
     </LinearLayout>
 
 </LinearLayout>

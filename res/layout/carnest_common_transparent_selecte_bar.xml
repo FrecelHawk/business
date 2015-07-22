@@ -3,24 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical" >
     
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_margin="10dp"
         tools:ignore="UselessParent" >
 
-        <ImageView
+      <ImageView
             android:id="@+id/imageView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:contentDescription="@string/todo"
-            android:src="@drawable/carenest_business_envrionment" />
+            android:layout_centerInParent="true"
+            android:src="@drawable/carnest_main_income_menoy" />
 
         <TextView
             android:id="@+id/textView1"
@@ -29,21 +29,23 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="28dp"
-            android:layout_marginStart="28dp"
-            android:text="@string/business_envrionment" />
+            android:layout_marginLeft="40dp"
+            android:layout_marginStart="40dp"
+            android:text="昨日营业收入"
+            android:textColor="@color/main_font"
+            tools:ignore="HardcodedText" />
 
-        <ImageView
+        <TextView
             android:id="@+id/imageView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
-            android:contentDescription="@string/todo"
             android:paddingRight="@dimen/common_select_bar_paddingRight"
-            android:src="@drawable/carnest_arrow"
-            tools:ignore="RtlHardcoded,RtlSymmetry" />
+            android:text="300"
+            android:textColor="@color/main_font"
+            tools:ignore="RtlHardcoded,RtlSymmetry,HardcodedText" />
 
     </RelativeLayout>
     

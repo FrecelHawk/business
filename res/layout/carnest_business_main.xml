@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/carnest_main_bg"
+    android:paddingLeft="42dp"
+    android:paddingRight="42dp"
+    android:orientation="vertical" >
+
+    
+    <include 
+        android:id="@+id/main_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_marginTop"
+        layout="@layout/carnest_main_head"/>
+
+    <include 
+        android:id="@+id/order_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        layout="@layout/carnest_main_order_bar"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        
+        <include
+            android:id="@+id/main_tab1"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+        
+        <include 
+            android:id="@+id/main_tab2"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+        
+        <include 
+            android:id="@+id/main_tab3"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+        
+        <include 
+            android:id="@+id/main_tab4"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+        
+        <include 
+            android:id="@+id/main_tab5"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+        
+        <include 
+            android:id="@+id/main_tab6"
+            layout="@layout/carnest_common_transparent_selecte_bar1"/>
+    </LinearLayout>
+  
+   
+</LinearLayout>
