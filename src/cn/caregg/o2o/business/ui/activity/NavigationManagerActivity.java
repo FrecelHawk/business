@@ -5,9 +5,6 @@ import java.util.List;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -16,9 +13,7 @@ import cn.caregg.o2o.business.R;
 import cn.caregg.o2o.business.engine.page.control.FragmentControl;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
-import cn.caregg.o2o.business.ui.base.BaseActivity;
 import cn.caregg.o2o.business.ui.base.BaseFragmentActivity;
-import cn.caregg.o2o.business.ui.fragment.MyselfFragment;
 import cn.caregg.o2o.business.utils.ResourceUtils;
 
 import com.lidroid.xutils.ViewUtils;
@@ -27,7 +22,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 
 /**
  * @ClassName: NavigationManagerActivity
- * @Description: TODO  处理导航
+ * @Description: TODO  导航管理
  * @author FH 
  * @date 2015年7月14日 下午2:28:27
  * 
@@ -44,6 +39,9 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
    
    private NavigationControl navigationControl;
    
+   @ViewInject(R.id.bottom_navigation_layout)
+   private ViewGroup  bottomNavigationLyaout;
+   
    private String[]  fragmentNames = ResourceUtils.getStringArray(R.array.main_fragment);
    
 // 底部导航Tab
@@ -53,8 +51,10 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
    private int[] ngImgs = {R.drawable.carnest_home_tab,R.drawable.carnest_order_tab,R.drawable.carnest_bill_tab,R.drawable.carnest_myself_tab};
    
 // 底部导航效果
-   private int[] ngImgPress = {R.drawable.carnest_home_tab_press,R.drawable.carnest_order_tab_press,R.drawable.carnest_bill_tab_press,R.drawable.carnest_myself_tab_press};
-
+	private int[] ngImgPress = { R.drawable.carnest_home_tab_press,
+			R.drawable.carnest_order_tab_press,
+			R.drawable.carnest_bill_tab_press,
+			R.drawable.carnest_myself_tab_press };
    
    private String[] tabtxt = ResourceUtils.getStringArray(R.array.tabTxt);
 
@@ -71,7 +71,9 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 		initialTab();
 		navigationControl = new NavigationControl()
 		     .setNavigationInf(new NavigationBar(navigation,NavigationManagerActivity.this))
-		     .setTitle("主页");
+		     .setTitle("主页")
+		     .hideArrow();
+		System.out.println("test");
 	}
 
 
@@ -159,4 +161,10 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 
 		
 	};
+	
+	
+	public void setBottomNavigationBackground(int reid){
+		bottomNavigationLyaout.setBackgroundResource(reid);
+	}
+	
 }
