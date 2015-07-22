@@ -23,7 +23,7 @@
     </string-array>
     <!-- Fragment页面切换顺序必须对应底部导航 -->
     <string-array name="main_fragment">
-          <item >cn.caregg.o2o.business.ui.fragment.HomePageFragment</item>
+          <item >cn.caregg.o2o.business.ui.fragment.MainPageFragment</item>
           <item >cn.caregg.o2o.business.ui.fragment.OrderManagerFragment</item>
           <item >cn.caregg.o2o.business.ui.fragment.BillManagerFragment</item>
           <item >cn.caregg.o2o.business.ui.fragment.MyselfFragment</item>
@@ -31,5 +31,27 @@
     <string name="business_envrionment">商家环境</string>
     <string name="business_myself_phone_numer">手机号：%1$s</string>
     <string name="business_name">上海百瑞洗车行</string>
-    
+    <string-array name="business_myself_tab">
+           <item >消息通知</item>
+           <item >查看店铺</item>
+           <item >用户信息</item>
+           <item >意见反馈</item>
+           <item >账户信息</item>
+    </string-array>
+    <string-array name="business_info_tab">
+           <item >商家位置</item>
+           <item >联系方式</item>
+           <item >营业时间</item>
+           <item >商家环境</item>
+           <item >商家介绍</item>
+           <item >提现账号</item>
+     </string-array>
+     <string-array name="main_tabTxts">
+           <item >昨日营业收入</item>
+           <item >本周营业收入</item>
+           <item >可提款金额</item>
+           <item >洗车商品</item>
+           <item >美容商品</item>
+           <item >保养商品</item>
+      </string-array>
 </resources>

@@ -10,7 +10,9 @@
     <!-- 蓝 -->
     <color name="navigation_blue">#3B95D3</color>
     <color name="navigation_font_blue">#BED9EE</color>
-    
+    <color name="navigation_bottom_blue">#1280BA</color>
+    <!-- 黄色 -->
+    <color name="main_order_font">#FFD200</color>
     <!-- 黑色字体 -->
     <color name="background">#EFEFF4</color>
     <!-- 纯黑 -->
@@ -18,4 +20,5 @@
     <color name="tab_bottom">#F1F1F5</color>
     <color name="tab_line">#C2C2C2</color>
     <color name="myself_background">#F1F1F5</color>
+    <color name="main_font">#C0DEF0</color>
 </resources>
