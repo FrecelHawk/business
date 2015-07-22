@@ -15,4 +15,8 @@ public interface NavigationInf {
 	public void  hide();
 	
 	public void setTitle(String title);
+	
+	public void  hideArrow();
+	
+	public void  showArrow();
 }

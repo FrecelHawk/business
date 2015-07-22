@@ -27,10 +27,21 @@ public class NavigationControl {
 	public NavigationControl  hideNavigation(){
 		navigationInf.hide();
 		return this;
-	};
+	}
 	
 	public NavigationControl showNavigation(){
 		navigationInf.show();
 		return this;
-	};
+	}
+	
+	public NavigationControl showArrow(){
+		navigationInf.showArrow();
+		return this;
+	}
+	
+	public NavigationControl hideArrow(){
+		navigationInf.hideArrow();
+		return this;
+	}
+	
 }

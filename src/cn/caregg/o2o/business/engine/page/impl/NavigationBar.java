@@ -89,6 +89,16 @@ public class NavigationBar implements NavigationInf {
 			   activity.finish();
      		}
 		
+	}
+
+	@Override
+	public void hideArrow() {
+		leftarrow.setVisibility(View.GONE);
+	}
+
+	@Override
+	public void showArrow() {
+		leftarrow.setVisibility(View.VISIBLE);
 	};
 
 }
