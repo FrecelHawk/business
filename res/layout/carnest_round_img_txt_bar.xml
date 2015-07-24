@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="13412345678"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded,HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:text="海里的鱼"
+        android:textColor="@color/news_font"
+        tools:ignore="RtlHardcoded,HardcodedText" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignParentRight="true"
+        android:text="2015-07-25 12:54:36"
+        android:textColor="@color/news_font"
+        tools:ignore="RtlHardcoded,HardcodedText" />
+
+    <cn.caregg.o2o.business.ui.view.RoundImageView
+        android:id="@+id/roundImageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/logo"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/roundImageView1"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/roundImageView1"
+        android:text="粤BR8888"
+        android:textSize="18sp"
+        tools:ignore="RtlHardcoded,HardcodedText" />
+
+</RelativeLayout>

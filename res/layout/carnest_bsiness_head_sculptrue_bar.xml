@@ -44,6 +44,7 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/white_gray"
                 android:text="@string/business_myself_phone_numer" />
         </LinearLayout>
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded,UselessParent" >
+
+        <include
+            android:id="@+id/tab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            layout="@layout/carnest_common_txt_bar" />
+
+        <include
+            android:id="@+id/tab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab1"
+            layout="@layout/carnest_common_txt_bar" />
+
+        <include
+            android:id="@+id/tab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab2"
+            layout="@layout/carnest_common_txt_bar" />
+
+        <cn.caregg.o2o.business.ui.view.RoundImageView
+            android:id="@+id/roundImageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/tab1"
+            android:layout_marginRight="35dp"
+            android:src="@drawable/logo"
+            tools:ignore="RtlHardcoded" />
+    </RelativeLayout>
+
+</LinearLayout>

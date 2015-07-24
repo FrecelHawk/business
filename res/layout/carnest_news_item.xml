@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <include
+            android:id="@+id/tab_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            layout="@layout/carnest_common_notice_img"
+            tools:ignore="RtlHardcoded" />
+
+        <include
+            android:id="@+id/tab_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tab_left"
+            layout="@layout/carnest_common_date_bar"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tab_right"
+            android:layout_toRightOf="@id/tab_left"
+            android:text="测试~~~~~~~~~~~"
+            android:textColor="@color/news_font"
+            tools:ignore="RtlHardcoded,HardcodedText" />
+
+</RelativeLayout>

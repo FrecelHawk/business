@@ -46,7 +46,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:textColor="@color/white_gray"
-          android:background="@drawable/button_style"
+          android:background="@drawable/login_button_style"
           android:text="@string/login"
           android:onClick="login"
         />

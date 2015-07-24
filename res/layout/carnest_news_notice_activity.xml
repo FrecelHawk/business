@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+ 
+    <include 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/carnest_news_notice_navigation"/>
+    
+<!--     
+   
+    adapter 项
+   <include 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        layout="@layout/carnest_news_item"/> -->
+    
+    <ListView 
+        android:layout_marginTop="@dimen/activity_marginTop"
+        android:id="@+id/listView"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+        
+    </ListView>
+
+</LinearLayout>
