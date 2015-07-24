@@ -76,6 +76,10 @@ public class ResourceUtils {
 		return BusinessApplication.mContext.getResources().getIntArray(id);
 	}
 	
+	public static String  getStringFormat(int id,Object... formatArgs){
+		return BusinessApplication.mContext.getResources().getString(id, formatArgs);
+	}
+	
 	//************************************************ dimens values************************************************************//
 	
 	public static float getDimens(int id){
@@ -87,4 +91,6 @@ public class ResourceUtils {
 	public static Drawable getDrawable(int id) {
 		return BusinessApplication.mContext.getResources().getDrawable(id);
 	}
+	
+	
 }
