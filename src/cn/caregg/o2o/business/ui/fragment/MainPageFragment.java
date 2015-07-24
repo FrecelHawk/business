@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.engine.page.constant.MainPageFragmentConstant;
+import cn.caregg.o2o.business.engine.page.constant.NavigationConstant;
 import cn.caregg.o2o.business.ui.activity.NavigationManagerActivity;
 import cn.caregg.o2o.business.ui.base.BaseFragment;
 import cn.caregg.o2o.business.utils.ResourceUtils;
@@ -31,20 +33,6 @@ public class MainPageFragment extends BaseFragment {
 	
 	private View view;
 	
-	
-	private int[] imgTabs={R.drawable.carnest_main_income_menoy,
-			               R.drawable.carnest_main_income_menoy,
-			               R.drawable.carnest_main_check,
-			               R.drawable.carnest_main_vehicle_cleaning,
-			               R.drawable.carnest_main_cosmetology,
-			               R.drawable.carnest_main_maintain};
-	
-	private int[]  tabs = { R.id.main_tab1,
-				            R.id.main_tab2,
-				            R.id.main_tab3,
-				            R.id.main_tab4,
-				            R.id.main_tab5,
-				            R.id.main_tab6};
 	private ViewGroup head;
 	
 	private ViewGroup  orderBar;
@@ -55,7 +43,7 @@ public class MainPageFragment extends BaseFragment {
 
 	
 	
-	private String[] tabTxt =ResourceUtils.getStringArray(R.array.main_tabTxts);
+
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,13 +52,29 @@ public class MainPageFragment extends BaseFragment {
 		
 		head = (ViewGroup) view.findViewById(R.id.main_head);
 		
-		((NavigationManagerActivity)getActivity()).setBottomNavigationBackground(R.color.navigation_bottom_blue);
-		
-		initialOrderBar();
+	    initialOrderBar();
 		
 		initinalTab();
+		
+		changeNavigation();
+	
 		return view;
 	}
+
+
+
+	private void changeNavigation() {
+		((NavigationManagerActivity)getActivity()).setBottomNavigationBackground(R.color.navigation_bottom_blue);
+		((NavigationManagerActivity)getActivity()).changeNavigationNormalImg(NavigationConstant.navigationStillTabs);
+	}
+
+	
+	@Override
+	public void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+	}
+   
 
 	private void initialOrderBar() {
 		orderBar = (ViewGroup) view.findViewById(R.id.order_bar);
@@ -86,10 +90,10 @@ public class MainPageFragment extends BaseFragment {
 	}
 
 	private void initinalTab() {
-		for(int i=0;i<tabs.length;i++){
-			  ViewGroup viewGroup = (ViewGroup) view.findViewById(tabs[i]);
-			  ((ImageView)viewGroup.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(imgTabs[i]));
-			  ((TextView)viewGroup.findViewById(R.id.textView1)).setText(tabTxt[i]);
+		for(int i=0;i<MainPageFragmentConstant.tabs.length;i++){
+			  ViewGroup viewGroup = (ViewGroup) view.findViewById(MainPageFragmentConstant.tabs[i]);
+			  ((ImageView)viewGroup.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(MainPageFragmentConstant.imgTabs[i]));
+			  ((TextView)viewGroup.findViewById(R.id.textView1)).setText(MainPageFragmentConstant.tabTxt[i]);
 			  viewGroup.setOnClickListener(new SeleteListener());
 		}
 	}

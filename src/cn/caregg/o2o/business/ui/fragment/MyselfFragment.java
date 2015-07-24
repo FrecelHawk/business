@@ -2,10 +2,8 @@ package cn.caregg.o2o.business.ui.fragment;
 
 
 import cn.caregg.o2o.business.R;
-import cn.caregg.o2o.business.engine.page.control.NavigationControl;
-import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
+import cn.caregg.o2o.business.engine.page.constant.MyselfFragmentConstant;
 import cn.caregg.o2o.business.ui.activity.BusinessInfoActivity;
-import cn.caregg.o2o.business.ui.activity.NavigationManagerActivity;
 import cn.caregg.o2o.business.ui.base.BaseFragment;
 import cn.caregg.o2o.business.utils.ActivityStartUtil;
 import cn.caregg.o2o.business.utils.ResourceUtils;
@@ -33,20 +31,6 @@ public class MyselfFragment extends BaseFragment {
 	
 	private View view;
 	
-//	选择条图片
-	private int[] imags = { R.drawable.carnest_message,
-			R.drawable.carnest_business, R.drawable.carnest_myself,
-			R.drawable.carnest_feedback, R.drawable.carnest_logo };	 
-	
-//	选择条文本
-	private String[]  tabTxts = ResourceUtils.getStringArray(R.array.business_myself_tab);
-	
-//	选择条布局
-	private int[] tabs = { R.id.select_tab1, R.id.select_tab2,
-			               R.id.select_tab3, R.id.select_tab4, 
-			               R.id.select_tab5 };
-	
-	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -70,11 +54,11 @@ public class MyselfFragment extends BaseFragment {
 	}
 
 	private void initialTabView() {
-		for(int i=0;i<tabs.length;i++){
-			ViewGroup  viewGroup = (ViewGroup) view.findViewById(tabs[i]);
-			Drawable drawable = ResourceUtils.getDrawable(imags[i]);
+		for(int i=0;i<MyselfFragmentConstant.tabs.length;i++){
+			ViewGroup  viewGroup = (ViewGroup) view.findViewById(MyselfFragmentConstant.tabs[i]);
+			Drawable drawable = ResourceUtils.getDrawable(MyselfFragmentConstant.imags[i]);
 			((ImageView)viewGroup.findViewById(R.id.imageView1)).setImageDrawable(drawable);
-			((TextView)viewGroup.findViewById(R.id.textView1)).setText(tabTxts[i]);
+			((TextView)viewGroup.findViewById(R.id.textView1)).setText(MyselfFragmentConstant.tabTxts[i]);
 			viewGroup.setOnClickListener(new SelecteListener());
 		}
 	}

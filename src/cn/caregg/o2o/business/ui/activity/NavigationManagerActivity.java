@@ -10,6 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.engine.page.constant.NavigationConstant;
 import cn.caregg.o2o.business.engine.page.control.FragmentControl;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
@@ -42,26 +43,8 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
    @ViewInject(R.id.bottom_navigation_layout)
    private ViewGroup  bottomNavigationLyaout;
    
-   private String[]  fragmentNames = ResourceUtils.getStringArray(R.array.main_fragment);
-   
-// 底部导航Tab
-   private int[] ngTabs = {R.id.navigation_tab1,R.id.navigation_tab2,R.id.navigation_tab3,R.id.navigation_tab4};
-   
-// 底部导航Img
-   private int[] ngImgs = {R.drawable.carnest_home_tab,R.drawable.carnest_order_tab,R.drawable.carnest_bill_tab,R.drawable.carnest_myself_tab};
-   
-// 底部导航效果
-	private int[] ngImgPress = { R.drawable.carnest_home_tab_press,
-			R.drawable.carnest_order_tab_press,
-			R.drawable.carnest_bill_tab_press,
-			R.drawable.carnest_myself_tab_press };
-   
-   private String[] tabtxt = ResourceUtils.getStringArray(R.array.tabTxt);
-
 
    private List<TextView>  tabs = new ArrayList<TextView>();
-   
-   
    
    @Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -78,10 +61,10 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 
 
 	private void initialTab() {
-		for(int index=0;index<ngTabs.length;index++){
-			 TextView txtView = (TextView) findViewById(ngTabs[index]);
-			 txtView.setText(tabtxt[index]);
-			 Drawable drawable = ResourceUtils.getDrawable(ngImgs[index]);
+		for(int index=0;index<NavigationConstant.ngTabs.length;index++){
+			 TextView txtView = (TextView) findViewById(NavigationConstant.ngTabs[index]);
+			 txtView.setText(NavigationConstant.tabtxt[index]);
+			 Drawable drawable = ResourceUtils.getDrawable(NavigationConstant.ngImgs[index]);
 			 txtView.setCompoundDrawablesWithIntrinsicBounds(null, drawable, null, null);
 			 txtView.setOnClickListener(new NavigationListener());
 			 tabs.add(txtView);
@@ -98,7 +81,8 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 
 	private void defaultInitialFragment() {
 		try {
-			FragmentControl.showFragment(NavigationManagerActivity.this, Class.forName(fragmentNames[oldIndex]));
+			FragmentControl.showFragment(NavigationManagerActivity.this,
+					Class.forName(NavigationConstant.fragmentNames[oldIndex]));
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -110,7 +94,7 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 		 hideOldTab();
 		 setTab(tabs.get(index),
 				ResourceUtils.getColor(R.color.navigation_font_blue),
-				ngImgPress[index]);
+				NavigationConstant.ngImgPress[index]);
 		 return index;
 	}
    
@@ -118,7 +102,7 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 	private void hideOldTab() {
 		setTab(tabs.get(oldIndex),
 				ResourceUtils.getColor(R.color.navigation_font_gray),
-				ngImgs[oldIndex]);
+				NavigationConstant.ngImgs[oldIndex]);
 	}
 
 
@@ -129,14 +113,14 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 	}
 	
 	private void setTile(int index) {
-		navigationControl.setTitle(tabtxt[index]);
+		navigationControl.setTitle(NavigationConstant.tabtxt[index]);
 	}
 	
 	private void switchFragment(int index) {
 		try {
 			FragmentControl.swtichFragment(NavigationManagerActivity.this, 
-					  Class.forName(fragmentNames[oldIndex]), 
-					  Class.forName(fragmentNames[index]));
+					  Class.forName(NavigationConstant.fragmentNames[oldIndex]), 
+					  Class.forName(NavigationConstant.fragmentNames[index]));
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -147,10 +131,19 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 
 		@Override
 		public void onClick(View v) {
-			 for(int index=0;index<ngTabs.length;index++){
-				  if(v.getId()==ngTabs[index]){
+			 for(int index=0;index<NavigationConstant.ngTabs.length;index++){
+				 
+				  if(v.getId()==NavigationConstant.ngTabs[index]){
 					  setTile(index);
 					  switchFragment(index);
+					  if(index==0){
+						    setBottomNavigationBackground(R.color.navigation_bottom_blue);
+							changeNavigationNormalImg(NavigationConstant.navigationStillTabs);
+							oldIndex = 0;
+							 return;
+					  }else{
+						  defaultNavigation();
+					  }
 					  oldIndex = touchTab(index); 
 					  break;
 				  }
@@ -158,13 +151,45 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 			 }
 		}
 
+	
+
 
 		
 	};
+	
+	@Deprecated
+	public void switchNavigation(int index) {
+		if(index==0){
+			 setBottomNavigationBackground(R.color.navigation_bottom_blue);
+			 changeNavigationNormalImg(NavigationConstant.navigationStillTabs);
+			 return;
+		}
+		defaultNavigation();
+	}
+
+
+	private void defaultNavigation() {
+		defaultNavigationBackground();
+		changeNavigationNormalImg(NavigationConstant.ngImgs);
+	}
 	
 	
 	public void setBottomNavigationBackground(int reid){
 		bottomNavigationLyaout.setBackgroundResource(reid);
 	}
+	
+	
+	public void defaultNavigationBackground(){
+		bottomNavigationLyaout.setBackgroundResource((R.color.white));
+	}
+	
+	public void changeNavigationNormalImg(int[] imgs){
+		  for(int i=0;i<tabs.size();i++){
+			tabs.get(i).setCompoundDrawablesWithIntrinsicBounds(null,
+					ResourceUtils.getDrawable(imgs[i]), null, null);
+			tabs.get(i).setTextColor(ResourceUtils.getColor(R.color.navigation_font_gray));
+		 }
+	}
+	
 	
 }
