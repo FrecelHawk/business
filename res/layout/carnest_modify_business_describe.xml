@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/carnest_top_navigation" />
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_marginLeft"
+        android:layout_marginRight="@dimen/activity_marginRight"
+        android:layout_marginTop="@dimen/activity_marginTop"
+        layout="@layout/carnest_common_textfield"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text="最多可输入100个字"
+        android:textColor="@color/news_font"
+        android:textSize="10sp"
+        tools:ignore="RtlHardcoded,HardcodedText,SmallSp" />
+    
+    <include 
+        android:layout_marginTop="@dimen/activity_marginTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/carnest_common_button"/>
+
+</LinearLayout>

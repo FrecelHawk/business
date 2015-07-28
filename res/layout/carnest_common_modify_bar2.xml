@@ -3,26 +3,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal" >
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:padding="5dp" >
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/todo"
-        android:src="@drawable/carnest_login_phone_bg" />
+        android:layout_gravity="center"
+        android:src="@drawable/carnest_binding_passwd"
+        tools:ignore="ContentDescription" />
 
     <cn.caregg.o2o.business.ui.view.ClearEditText
-        android:id="@+id/login_edit_txt"
+        android:id="@+id/edit_txt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/carnest_login_phone_edit"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:background="@color/white"
         android:drawableEnd="@drawable/clear_normal_list"
         android:drawableRight="@drawable/clear_normal_list"
-        android:hint="@string/phone_number"
-        android:inputType="text|phone"
-        android:paddingLeft="10dp"
+        android:hint="@string/plase_inputdata"
         android:textColorHint="@color/edit_hint_font"
-        tools:ignore="RtlHardcoded,RtlSymmetry" />
+        tools:ignore="RtlHardcoded" >
+    </cn.caregg.o2o.business.ui.view.ClearEditText>
 
 </LinearLayout>

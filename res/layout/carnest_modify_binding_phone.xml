@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    
+    <include 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/carnest_top_navigation"/>
+    
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="@dimen/activity_marginTop"
+        android:background="@color/background"
+        android:orientation="vertical" >
+        
+        <include 
+            android:id="@+id/tab1"
+            android:layout_marginBottom="10dp"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        layout="@layout/carnest_common_modify_bar2"/>
+        
+        <include 
+            android:id="@+id/tab2"
+	        android:layout_width="match_parent"
+	        android:layout_height="40dp"
+	        layout="@layout/carnest_common_modify_bar2"/>
+        
+        <include 
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            layout="@layout/carnest_modify_binding_check_number"
+            />
+    </LinearLayout>
+
+   <RelativeLayout 
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       
+       <include 
+           android:id="@+id/confirm"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           layout="@layout/carnest_common_button"/>
+       
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/confirm"
+           android:layout_margin="20dp"
+           android:text="更换手机号之后"
+           android:textColor="@color/news_font"
+           tools:ignore="HardcodedText" />
+       
+   </RelativeLayout>
+
+</LinearLayout>

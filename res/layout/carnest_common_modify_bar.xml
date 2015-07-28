@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="9dp"
+        android:src="@drawable/carnest_modify_contact"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:text="联系人"
+        android:textColor="@color/news_font"
+        android:textSize="12sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <include
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        layout="@layout/carnest_common_vertical_line"
+        tools:ignore="RtlHardcoded" />
+
+    <cn.caregg.o2o.business.ui.view.ClearEditText
+        android:id="@+id/edit_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/clear_normal_list"
+        android:drawableRight="@drawable/clear_normal_list"
+        android:hint="@string/plase_inputdata"
+        android:inputType="text|phone"
+        android:textColorHint="@color/edit_hint_font"
+        tools:ignore="RtlHardcoded" />
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navigation_blue"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent" >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/carnest_login_registration_left_arrow"
+            tools:ignore="RtlHardcoded" />
+
+        <cn.caregg.o2o.business.ui.view.ClearEditText
+            android:id="@+id/textView"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/imageView"
+            android:layout_marginLeft="10dp"
+            android:layout_centerInParent="true"
+            android:padding="8dp"
+            android:background="@color/white"
+            android:text="@string/navigation"
+            android:drawableRight="@drawable/clear_normal_list"
+            android:drawableEnd="@drawable/clear_normal_list" 
+            android:textSize="@dimen/navigation_top_font" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="取消"
+            android:textColor="@color/white_gray"
+            tools:ignore="RtlHardcoded,HardcodedText" />
+        
+    </RelativeLayout>
+
+    
+</LinearLayout>

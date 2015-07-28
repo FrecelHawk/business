@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <cn.caregg.o2o.business.ui.view.RadioGroupCompound
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+       <include
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              layout="@layout/carnest_feedback_radio_bar"/>
+          
+       <include 
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              layout="@layout/carnest_feedback_radio_bar"/>
+          
+    </cn.caregg.o2o.business.ui.view.RadioGroupCompound>
+</LinearLayout>
