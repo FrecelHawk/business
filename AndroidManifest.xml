@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="20" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -28,6 +28,7 @@
         <uses-library android:name="android.test.runner"/>
         <activity android:name="cn.caregg.o2o.business.ui.activity.LoginActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.NavigationManagerActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessInfoActivity"></activity>
     </application>
     <instrumentation 
         android:name="android.test.InstrumentationTestRunner"
