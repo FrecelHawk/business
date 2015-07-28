@@ -11,6 +11,9 @@
     <color name="navigation_blue">#3B95D3</color>
     <color name="navigation_font_blue">#BED9EE</color>
     <color name="navigation_bottom_blue">#1280BA</color>
+    <color name="check_code">#248CC8</color>
+    <color name="blue">#3B95D3</color>
+    <color name="blue_press">#1C74B1</color>
     <!-- 黄色 -->
     <color name="main_order_font">#FFD200</color>
     <!-- 黑色字体 -->
@@ -25,4 +28,6 @@
     <!-- 红色 -->
     <color name="red">#E70012</color>
     <color name="red_press">#B11C1C</color>
+    <!-- 橙色 -->
+    <color name="orange">#FD6E42</color>
 </resources>

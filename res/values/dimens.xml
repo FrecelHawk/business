@@ -2,6 +2,10 @@
 <resources>
     
     <dimen name="activity_marginTop">15dp</dimen>
+    <dimen name="activity_marginLeft">20dp</dimen>
+    <dimen name="activity_marginRight">20dp</dimen>
+    <dimen name="horizontal_line_marginTop">10dp</dimen>
+    <dimen name="common_bar_height">40dp</dimen>
     <dimen name="common_select_bar_paddingRight">20dp</dimen>
     <dimen name="navigation_top_font">20sp</dimen>
 </resources>

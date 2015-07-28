@@ -54,4 +54,6 @@
            <item >美容商品</item>
            <item >保养商品</item>
       </string-array>
+           <string name="plase_inputdata">请输入数据</string>
+           <string name="save">保存</string>
 </resources>
