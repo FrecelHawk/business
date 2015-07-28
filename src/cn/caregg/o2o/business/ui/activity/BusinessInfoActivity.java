@@ -34,7 +34,7 @@ public class BusinessInfoActivity extends BaseActivity {
 	private int[] imags = { R.drawable.carnest_position,
 			R.drawable.carnest_contact_pattern,
 			R.drawable.carnest_business_date,
-			R.drawable.carenest_business_envrionment,
+			R.drawable.carnest_business_envrionment,
 			R.drawable.carnest_business_describe,
 			R.drawable.carnest_business_withdraw_deposit };
 //	标签文本
