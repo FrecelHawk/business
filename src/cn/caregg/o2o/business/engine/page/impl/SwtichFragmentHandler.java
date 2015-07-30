@@ -24,7 +24,7 @@ public class SwtichFragmentHandler implements SwtichFragment {
     private static final int TAB_CONTENT = R.id.tab_content;
     
     
-	Map<String,BaseFragment>  fragments = new HashMap<String, BaseFragment>();
+	 volatile Map<String,BaseFragment>  fragments = new HashMap<String, BaseFragment>();
     
      public void addFragment(BaseFragment baseFragment){
     	 if(null==baseFragment){

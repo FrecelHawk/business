@@ -19,8 +19,11 @@ public abstract class BaseRequestCallBack<T> extends RequestCallBack<T> {
 	
 	@Override
 	public void onSuccess(ResponseInfo<T> responseInfo) {
-		LogUtils.d(TAG + responseInfo.result);
-		onSuccess(responseInfo(responseInfo.result));
+		LogUtils.i(TAG + responseInfo.result);
+		if(null!=responseInfo(responseInfo.result))
+		        onSuccess(responseInfo(responseInfo.result));
+		else 
+			  onFailure(responseInfo.result.toString());
 	}
 	
 

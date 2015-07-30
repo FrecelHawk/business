@@ -10,4 +10,8 @@ package cn.caregg.o2o.business.config;
 
 public interface ConstantValues {
 
+	/**
+	 *  客服电话
+	 */
+	public String  CUSTOM_SERVICE_PHONE="4009601118";
 }

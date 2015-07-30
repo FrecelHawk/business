@@ -24,11 +24,10 @@ public class RequestParamsByHeader extends RequestParams {
 		super(charset);
 		addHeaders();
 	}
-	private void addHeaders() {
+	
+	protected void addHeaders() {
 		addHeader("Content-Type", "application/json");
 		addHeader("charset", "utf-8");
-//		addHeader("Authorization", PhoneUtil.getTVIMEI(BusinessApplication.mContext));
-//		addHeader("reqFrom", "2");
 	}
 	
 	

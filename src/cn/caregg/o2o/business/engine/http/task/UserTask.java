@@ -36,7 +36,7 @@ public class UserTask {
 	
 	/** 
 	 * @author FH
-	 * @Description: TODO   重置密码
+	 * @Description: TODO   忘记密码   在登录接口里显示是重置密码
 	 * @param telephone
 	 * @param validateCode
 	 * @param password
@@ -45,7 +45,7 @@ public class UserTask {
 	 * @throws:throws
 	*/ 
 	
-	public <T> void resetPwd(String telephone, String validateCode, String password, String password2, RequestCallBack<T> callBack){
+	public <T> void forgetPwd(String telephone, String validateCode, String password, String password2, RequestCallBack<T> callBack){
 		new BaseRequestHandler()
 				.send(BusinessAPI.USER_RESTPWD, HttpMethod.POST,
 						UserRequestParameter.getRestPwd(telephone,

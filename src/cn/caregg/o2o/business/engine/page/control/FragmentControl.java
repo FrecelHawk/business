@@ -9,12 +9,11 @@ import cn.caregg.o2o.business.utils.ResourceUtils;
 
 /**
  * @ClassName: SwitchFragmentControl
- * @Description: TODO
+ * @Description: TODO  出现线程安全问题
  * @author FH 
  * @date 2015年7月20日 下午12:52:30
  * 
 */
-
 public class FragmentControl {
 
 	private static SwtichFragment fragment;

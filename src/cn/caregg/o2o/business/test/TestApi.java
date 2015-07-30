@@ -44,7 +44,7 @@ public class TestApi extends AndroidTestCase{
 			}
 
 			@Override
-			public void onFailure(String failureMsg) {
+			public void filterFailureMsg(String failureMsg) {
 				System.out.println(failureMsg);
 			}
 			

@@ -45,6 +45,9 @@ public class BusinessAPI {
 	}
 	
 
+	/**
+	 *  数据请求
+	 * **/
 	
 //	密码重置
 	public static String USER_RESTPWD = getRequestUrl("user/resetPwd");
@@ -52,5 +55,12 @@ public class BusinessAPI {
 	public static String USER_LOGIN = getRequestUrl("user/login");
 //	发送短信验证
 	public static String SEND_SMS  =getRequestUrl("user/sendSMSvalidateCode");
+	
+	
+	
+	/**
+	 *  页面请求
+	 * **/
+	public static String  PORTAL="https://www.caregg.cn/";
 	
 }

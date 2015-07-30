@@ -22,11 +22,11 @@ import com.lidroid.xutils.http.client.HttpRequest.HttpMethod;
 public class BaseRequestHandler implements IRequestHandler{
 
 	public <T> void send(String url, HttpMethod method, Object obj, RequestCallBack<T> callBack) {
-	    send(url, method, obj, new RequestParamsByHeader(), callBack);
+	    send(url, method, obj, new BusinessRequestParams(), callBack);
 	}
 	
 	public <T> void send(String url,HttpMethod method,RequestCallBack<T> callBack){
-		BusinessApplication.mHttpUtils.send(method, url, new RequestParamsByHeader(), callBack);
+		BusinessApplication.mHttpUtils.send(method, url, new BusinessRequestParams(), callBack);
 	}
 	
 	

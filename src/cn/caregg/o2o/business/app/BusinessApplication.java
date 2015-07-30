@@ -1,13 +1,11 @@
 package cn.caregg.o2o.business.app;
 
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Vector;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentSender.SendIntentException;
+import cn.caregg.o2o.business.engine.domain.Business;
 
 import com.lidroid.xutils.HttpUtils;
 
@@ -28,6 +26,14 @@ public class BusinessApplication extends Application {
 	
 	public static LinkedList<String> releaseList =null;
 	
+	/**
+	 *  当登录成功时服务器返回来
+	 */
+	public static String serviceOrgEToken ="";
+	
+	
+	public static Business business;
+	
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -35,6 +41,7 @@ public class BusinessApplication extends Application {
 		mContext = BusinessApplication.this;
 		mHttpUtils = new HttpUtils();
 		releaseList = new LinkedList<String>();
+		business = new Business();
 	}
 	
 	
@@ -46,6 +53,8 @@ public class BusinessApplication extends Application {
 				 mContext.sendBroadcast(new Intent(finishId));
 		 }
 		 releaseList.clear();
+		 business = null;
 			 
 	}
+	
 }

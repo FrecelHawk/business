@@ -2,11 +2,15 @@ package cn.caregg.o2o.business.ui.fragment;
 
 
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.config.ConstantValues;
 import cn.caregg.o2o.business.engine.page.constant.MyselfFragmentConstant;
 import cn.caregg.o2o.business.ui.activity.BusinessInfoActivity;
+import cn.caregg.o2o.business.ui.activity.SuggestionFeedbackActivity;
 import cn.caregg.o2o.business.ui.base.BaseFragment;
 import cn.caregg.o2o.business.utils.ActivityStartUtil;
+import cn.caregg.o2o.business.utils.PhoneUtil;
 import cn.caregg.o2o.business.utils.ResourceUtils;
+import cn.caregg.o2o.business.utils.ToastUtil;
 import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -34,11 +38,15 @@ public class MyselfFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
+		initView(inflater);
+		return view;
+	}
+
+	public void initView(LayoutInflater inflater) {
 		view = inflater.inflate(R.layout.carnest_myself_fragement, null);
 		initialBusinessHead();
 		initialTabView();
-		System.out.println("test");
-		return view;
+		view.findViewById(R.id.call_custom_service).setOnClickListener(new OnClick());
 	}
 
 	@SuppressWarnings("unused")
@@ -67,7 +75,28 @@ public class MyselfFragment extends BaseFragment {
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		Toast.makeText(getActivity().getBaseContext(), "我的", Toast.LENGTH_SHORT).show();
+	}
+	
+	/** 
+	 * @author FH
+	 * @Description: TODO  打电话给客服
+	 * @throws:throws
+	*/ 
+	
+	
+	public void callCustomService(){
+		ToastUtil.longShow(getActivity(), "打电话");
+		PhoneUtil.callPhone(getActivity(), ConstantValues.CUSTOM_SERVICE_PHONE);
+	}
+	
+	
+	private class OnClick  implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+            callCustomService();
+		}
+		
 	}
 	
 	
@@ -79,7 +108,9 @@ public class MyselfFragment extends BaseFragment {
 			case R.id.business_head:
 				  ActivityStartUtil.start(getActivity(), BusinessInfoActivity.class);
 				break;
-
+			case R.id.select_tab4:
+				  ActivityStartUtil.start(getActivity(), SuggestionFeedbackActivity.class);
+				   break;
 			default:
 				break;
 			}

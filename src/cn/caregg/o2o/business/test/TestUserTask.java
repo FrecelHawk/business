@@ -30,7 +30,7 @@ public class TestUserTask extends AndroidTestCase {
 			}
 
 			@Override
-			public void onFailure(String failureMsg) {
+			public void filterFailureMsg(String failureMsg) {
 				System.out.println(failureMsg);
 			}
 			
@@ -38,7 +38,7 @@ public class TestUserTask extends AndroidTestCase {
 	}
 //	测试重置
 	public void resetPwd(){
-		new UserTask().resetPwd("13501015801", "9245", "123456", "123456", new RequestCallBackString() {
+		new UserTask().forgetPwd("13501015801", "9245", "123456", "123456", new RequestCallBackString() {
 			
 			@Override
 			public void onSuccess(String data) {
@@ -46,7 +46,7 @@ public class TestUserTask extends AndroidTestCase {
 			}
 			
 			@Override
-			public void onFailure(String failureMsg) {
+			public void filterFailureMsg(String failureMsg) {
 				System.out.println(failureMsg);
 			}
 		});
@@ -60,7 +60,7 @@ public class TestUserTask extends AndroidTestCase {
 			}
 			
 			@Override
-			public void onFailure(String failureMsg) {
+			public void filterFailureMsg(String failureMsg) {
 				System.out.println(failureMsg);
 			}
 		});
