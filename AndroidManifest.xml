@@ -6,9 +6,11 @@
 
     <uses-sdk
         android:minSdkVersion="11"
-        android:targetSdkVersion="20" />
+        android:targetSdkVersion="21" />
     <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- 拨电话 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -29,6 +31,10 @@
         <activity android:name="cn.caregg.o2o.business.ui.activity.LoginActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.NavigationManagerActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessInfoActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.RestPasswdActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.ForgetPasswdActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.SuggestionFeedbackActivity"></activity>
+        
     </application>
     <instrumentation 
         android:name="android.test.InstrumentationTestRunner"
