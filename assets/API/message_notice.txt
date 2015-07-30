@@ -1,0 +1,96 @@
+{
+    "state": 1,
+    "message": "操作成功",
+    "data": {
+        "pageId": 1,
+        "pageSize": 10,
+        "pageOffset": 0,
+        "pageTail": 10,
+        "orderField": null,
+        "orderDirection": true,
+        "dataList": [
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 856,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "反而噶放到风格",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427976517000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 855,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "哥哥发发疯",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427976492000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 854,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "短发俄格供热公司的",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427970004000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 853,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "法国人改为发放",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427969984000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 852,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "打发打发似的方法是",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427969975000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 851,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "打发打发发放的",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427968707000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 850,
+                "noticeInfoTitle": "车辆异常",
+                "noticeInfoContent2": "反对沙发扶手的丰富",
+                "noticeTypeSeq": 43,
+                "noticeInfoTime": 1427968207000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 849,
+                "noticeInfoTitle": "车辆熄火",
+                "noticeInfoContent2": "大夫十分丰富玩法",
+                "noticeTypeSeq": 42,
+                "noticeInfoTime": 1427967285000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 848,
+                "noticeInfoTitle": "车辆点火",
+                "noticeInfoContent2": "打发打发的丰富",
+                "noticeTypeSeq": 41,
+                "noticeInfoTime": 1427967252000
+            },
+            {
+                "noticeInfoStatus": 1,
+                "noticeInfoSeq": 847,
+                "noticeInfoTitle": "获得积分",
+                "noticeInfoContent2": "如果如果如果让国人",
+                "noticeTypeSeq": 63,
+                "noticeInfoTime": 1427967244000
+            }
+        ],
+        "mysqlQueryCondition": " limit 0,10",
+        "orderCondition": ""
+    }
+}
