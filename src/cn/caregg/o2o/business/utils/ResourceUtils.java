@@ -13,7 +13,7 @@ import cn.caregg.o2o.business.app.BusinessApplication;
 public class ResourceUtils {
 	
 	//************************************************ Assets values************************************************************//
-    public static String geFileFromAssets(String fileName) {
+    public static String getFileFromAssets(String fileName) {
         if (fileName.equals("")) {
             return null;
         }
@@ -35,7 +35,7 @@ public class ResourceUtils {
 
     
   //************************************************ Raw values************************************************************//
-    public static String geFileFromRaw(int id) {
+    public static String getFileFromRaw(int id) {
 
     	StringBuilder s = new StringBuilder();
         try {

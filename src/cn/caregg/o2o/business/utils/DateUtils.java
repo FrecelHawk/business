@@ -1,4 +1,4 @@
-package cn.caregg.o2o.carnest.utils;
+package cn.caregg.o2o.business.utils;
 
 import java.sql.Timestamp;
 import java.text.DateFormat;
