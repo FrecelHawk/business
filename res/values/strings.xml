@@ -12,7 +12,10 @@
     <string name="apply_account_describe">没有账号?请前往车蛋官方网站注册申请</string>
     <string name="navigation">订单</string>
     <string name="common_tab">Tab</string>
-    
+    <string name="new_pwd">新密码</string>
+    <string name="old_pwd">旧密码</string>
+    <string name="confirm_pwd">确认密码</string>
+    <string name="reset_pwd">重置密码</string>
     
      <!-- 底部文字 -->
     <string-array name="tabTxt">
