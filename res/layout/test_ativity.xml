@@ -22,5 +22,13 @@
 		android:hint="请输入手机号码"
 		android:background="@drawable/pay_widget_input"
 		android:drawableRight="@drawable/clear_normal_list" />
+		
  -->
+
+    <cn.caregg.o2o.business.ui.view.CommonListView
+        android:id="@+id/commonListView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </cn.caregg.o2o.business.ui.view.CommonListView>
+ 
 </LinearLayout>
