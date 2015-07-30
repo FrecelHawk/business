@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    
+    <include 
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/carnest_top_navigation"/>
+    
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,6 +37,7 @@
     
     
     <include 
+        android:onClick="commit"
         layout="@layout/carnest_common_button"/>
 
 </LinearLayout>

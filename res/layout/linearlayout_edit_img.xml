@@ -20,7 +20,6 @@
         android:drawableEnd="@drawable/clear_normal_list"
         android:drawableRight="@drawable/clear_normal_list"
         android:hint="@string/phone_number"
-        android:inputType="text|phone"
         android:paddingLeft="10dp"
         android:textColorHint="@color/edit_hint_font"
         tools:ignore="RtlHardcoded,RtlSymmetry" />

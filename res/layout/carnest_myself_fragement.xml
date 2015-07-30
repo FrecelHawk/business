@@ -63,11 +63,13 @@
 			  
 			  
 			  <LinearLayout 
+			      android:id="@+id/call_custom_service"
 			      android:layout_width="wrap_content"
 			      android:layout_height="wrap_content"
 			      android:orientation="horizontal"
 			      android:gravity="center_horizontal"
 			      android:layout_marginTop="10dp"
+			      android:onClick="callCustomService"
 			      android:layout_gravity="center_horizontal"
 			      android:background="@drawable/carnest_circle_rectangle"
 			      android:padding="10dp">
