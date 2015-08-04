@@ -1,0 +1,33 @@
+/**
+  用户搜索
+**/
+{
+    "state": 1,
+    "message": "操作成功",
+    "data": {
+        "pageId": 1,
+        "pageSize": 10,
+        "pageOffset": 0,
+        "pageTail": 10,
+        "orderField": null,
+        "orderDirection": true,
+        "dataList": [
+            {
+                "carID": "津Aw111111",
+                "ownerTel": "13692258443",
+                "carOwnerPic": "",
+                "carOwnerSeq": 29,
+                "lastLoginTime": 1433990029000,
+                "ownerNickName": "哈哈哈"
+            },
+            {
+                "ownerTel": "13632724865",
+                "carOwnerPic": "",
+                "carOwnerSeq": 21,
+                "ownerNickName": "13632724865"
+            }
+        ],
+        "mysqlQueryCondition": " limit 0,10",
+        "orderCondition": ""
+    }
+}
