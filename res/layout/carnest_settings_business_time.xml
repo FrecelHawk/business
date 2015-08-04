@@ -4,7 +4,9 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-   <include layout="@layout/carnest_news_notice_navigation"/>
+   <include 
+       android:id="@+id/navigation"
+       layout="@layout/carnest_news_notice_navigation"/>
   
-    <include layout="@layout/carnest_settings_busines_input_time"/>
+   <include layout="@layout/carnest_settings_busines_input_time"/>
 </LinearLayout>
