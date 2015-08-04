@@ -29,7 +29,10 @@
         <!-- 测试库 -->
         <uses-library android:name="android.test.runner"/>
         <activity android:name="cn.caregg.o2o.business.ui.activity.LoginActivity"></activity>
-        <activity android:name="cn.caregg.o2o.business.ui.activity.NavigationManagerActivity"></activity>
+        <activity 
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize"
+            android:name="cn.caregg.o2o.business.ui.activity.NavigationManagerActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessInfoActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.RestPasswdActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.ForgetPasswdActivity"></activity>
@@ -43,6 +46,7 @@
         <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessEnvironment"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessDesribeActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.ModityContactActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.BindingPhoneAcitivity"></activity>
         
     </application>
     <instrumentation 
