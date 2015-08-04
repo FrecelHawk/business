@@ -11,6 +11,7 @@ import cn.caregg.o2o.business.R;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
+import cn.caregg.o2o.business.utils.ActivityStartUtil;
 import cn.caregg.o2o.business.utils.ResourceUtils;
 
 import com.lidroid.xutils.ViewUtils;
@@ -79,7 +80,24 @@ public class BusinessInfoActivity extends BaseActivity {
 
 		@Override
 		public void onClick(View v) {
-			
+			switch (v.getId()) {
+			case R.id.tab1:break;
+			case R.id.tab2:
+				  ActivityStartUtil.start(BusinessInfoActivity.this, ModityContactActivity.class);
+				break;
+			case R.id.tab3:
+				  ActivityStartUtil.start(BusinessInfoActivity.this, BusinessTimeActivity.class);
+				break;
+			case R.id.tab4:
+				  ActivityStartUtil.start(BusinessInfoActivity.this, BusinessEnvironment.class);
+				break;
+			case R.id.tab5:
+				  ActivityStartUtil.start(BusinessInfoActivity.this, BusinessDesribeActivity.class);
+				break;
+			case R.id.tab6:break;
+			default:
+				break;
+			}
 		}
 		
 	}

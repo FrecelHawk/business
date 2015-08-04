@@ -8,6 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.app.BusinessApplication;
+import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
+import cn.caregg.o2o.business.engine.http.task.UserTask;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
@@ -44,6 +47,17 @@ public class SuggestionFeedbackActivity extends BaseActivity {
 	
 	
 	public void commoit(View view){
-		ToastUtil.longShow(SuggestionFeedbackActivity.this, "提交");
+		new UserTask().feedback(BusinessApplication.business.getServiceOrgSeq(), content.getText().toString(), "1", new RequestCallBackString() {
+			
+			@Override
+			public void onSuccess(String data) {
+				 finish();
+			}
+			
+			@Override
+			public void filterFailureMsg(String failureMsg) {
+				ToastUtil.shortShow(SuggestionFeedbackActivity.this, failureMsg );
+			}
+		});
 	}
 }

@@ -87,7 +87,7 @@ public class UserSearchActivity extends CommonListViewAcitivty{
 			public void onSuccess(String data) {
 				if(!StringUtils.isEmpty(data)){
 					UserInfo  info = ResultPaser.paserObject(data, UserInfo.class);
-//					ActivityStartUtil.startActivityWithParcelable(UserSearchActivity.this, UserDetailActivity.class, info);
+					ActivityStartUtil.startActivityWithParcelable(UserSearchActivity.this, UserDetailActivity.class, info);
 				}
 			}
 			
