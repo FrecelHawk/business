@@ -15,7 +15,7 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 
 import cn.caregg.o2o.business.R;
 import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
-import cn.caregg.o2o.business.engine.http.task.UserTask;
+import cn.caregg.o2o.business.engine.http.task.BusinessTask;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
@@ -131,7 +131,7 @@ public class ForgetPasswdActivity extends BaseActivity {
 		@Override
 		public void onClick(View v) {
 			
-			new UserTask()
+			new BusinessTask()
 					.forgetPwd(phone.getText().toString(),
 							validateCode,
 							StringUtils.trim(pwd.getText().toString()),
@@ -185,7 +185,7 @@ public class ForgetPasswdActivity extends BaseActivity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			new UserTask().sendSMS(phone.getText().toString(), new RequestCallBackString() {
+			new BusinessTask().sendSMS(phone.getText().toString(), new RequestCallBackString() {
 				
 				@Override
 				public void onSuccess(String data) {

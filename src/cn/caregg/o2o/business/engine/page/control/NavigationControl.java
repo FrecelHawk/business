@@ -1,5 +1,7 @@
 package cn.caregg.o2o.business.engine.page.control;
 
+import android.view.View.OnClickListener;
+import cn.caregg.o2o.business.engine.page.impl.NoticeNavigationBar;
 import cn.caregg.o2o.business.engine.page.inf.NavigationInf;
 
 /**
@@ -41,6 +43,11 @@ public class NavigationControl {
 	
 	public NavigationControl hideArrow(){
 		navigationInf.hideArrow();
+		return this;
+	}
+	
+	public NavigationControl  noticeNavigation(OnClickListener listener){
+		((NoticeNavigationBar)navigationInf).onClick(listener);
 		return this;
 	}
 	

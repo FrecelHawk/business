@@ -17,7 +17,7 @@ public class BusinessAPI {
 	
 	static{
 		//1是本地，2是测试，3是正式
-		DOMAIN = Domain.TYPE.getEnvrionment(1);
+		DOMAIN = Domain.TYPE.getEnvrionment(4);
 	}
     
 	enum Domain{
@@ -27,8 +27,9 @@ public class BusinessAPI {
 			String str = "";
 			switch (type) {
 			case 1:str = "http://192.168.1.104:8080/";break;
-			case 2:str = "";break;                          //测试
-			case 3:str = "";break;                          //正式
+			case 2:str = "";break;                            //测试
+			case 3:str = "";break;                            //正式
+			case 4:str = "http://192.168.1.98:8080/";break;  //余西红本地ID
 			default:
 				str = "http://192.168.1.104:8080/";break;  //默认切换测试环境
 			}
@@ -55,8 +56,14 @@ public class BusinessAPI {
 	public static String USER_LOGIN = getRequestUrl("user/login");
 //	发送短信验证
 	public static String SEND_SMS  =getRequestUrl("user/sendSMSvalidateCode");
-	
-	
+//	消息通知
+	public static String FINDNOTICE = getRequestUrl("org/findNoticeInfoByUserSeq");
+//	标记消息为已读
+	public static String ALLARTICLE = getRequestUrl("org/updateStatusAllbyUserSeq");
+//	用户信息搜索
+	public static String FIND_CAR_OWNER  =getRequestUrl("org/findCarOwner");
+//	查看用户详情
+	public static String FIND_CAROWNER_BY_SEQ = getRequestUrl("org/findCarOwnerBySeq");
 	
 	/**
 	 *  页面请求

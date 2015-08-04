@@ -12,7 +12,7 @@ import cn.caregg.o2o.business.app.BusinessApplication;
 import cn.caregg.o2o.business.config.BusinessAPI;
 import cn.caregg.o2o.business.engine.domain.Business;
 import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
-import cn.caregg.o2o.business.engine.http.task.UserTask;
+import cn.caregg.o2o.business.engine.http.task.BusinessTask;
 import cn.caregg.o2o.business.engine.parse.ResultPaser;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
 import cn.caregg.o2o.business.utils.ActivityStartUtil;
@@ -107,7 +107,7 @@ public class LoginActivity extends BaseActivity {
 	
 	
 	public void login(View view){
-		new UserTask().login(phone.getText().toString(),
+		new BusinessTask().login(phone.getText().toString(),
 				             passwd.getText().toString(), 
 				             new RequestCallBackString() {
 			

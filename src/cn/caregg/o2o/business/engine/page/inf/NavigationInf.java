@@ -1,5 +1,6 @@
 package cn.caregg.o2o.business.engine.page.inf;
 
+
 /**
  * @ClassName: NavigationInf
  * @Description: TODO
@@ -19,4 +20,5 @@ public interface NavigationInf {
 	public void  hideArrow();
 	
 	public void  showArrow();
+	
 }

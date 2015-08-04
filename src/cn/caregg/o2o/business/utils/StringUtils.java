@@ -491,5 +491,19 @@ public class StringUtils {
 
 		return sb.toString();
 	}
+	
+	
+	/** 
+	 * @author FH
+	 * @Description: TODO  限制字符长度
+	 * @throws:throws
+	*/ 
+	
+	public static String imitStringLength(String str,int lenght,String format) {
+		 if(!StringUtils.isEmpty(str)&&str.length()>=lenght){
+			  return str.substring(0, lenght)+format;
+		 }
+		return str;
+	}
 
 }

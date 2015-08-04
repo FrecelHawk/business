@@ -6,7 +6,8 @@ import com.lidroid.xutils.HttpUtils;
 
 import cn.caregg.o2o.business.app.BusinessApplication;
 import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
-import cn.caregg.o2o.business.engine.http.task.UserTask;
+import cn.caregg.o2o.business.engine.http.task.NoticeTask;
+import cn.caregg.o2o.business.engine.http.task.BusinessTask;
 
 
 import android.test.AndroidTestCase;
@@ -35,7 +36,23 @@ public class TestApi extends AndroidTestCase{
 	
 	public void post(){
 		
-		new UserTask().login("13501015801","123456", new RequestCallBackString(){
+//		login();
+		new NoticeTask().pullPage("1", "10", "1", new RequestCallBackString() {
+			
+			@Override
+			public void onSuccess(String data) {
+				System.out.println(data);
+			}
+			
+			@Override
+			public void filterFailureMsg(String failureMsg) {
+				System.out.println(failureMsg);
+			}
+		});
+	}
+
+	public void login() {
+		new BusinessTask().login("13501015801","123456", new RequestCallBackString(){
 
 			@Override
 			public void onSuccess(String result) {

@@ -4,6 +4,7 @@ package cn.caregg.o2o.business.ui.base;
 import java.util.List;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -20,9 +21,9 @@ import android.widget.BaseAdapter;
 public abstract class  BaseListAdapter<E> extends BaseAdapter {
 
 
-	private final Context context;
-	
-	private final List<E> items;
+	protected final Context context;
+	protected LayoutInflater layoutInflater;
+	protected final List<E> items;
 	
 	public BaseListAdapter(Context context,List<E> list) {
 		this.context = context;

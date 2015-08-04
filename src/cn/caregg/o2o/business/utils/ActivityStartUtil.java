@@ -42,7 +42,7 @@ public class ActivityStartUtil {
 		//这里添加动画
 	}
 
-	public static void startActivityWithSerialize(Class<?> clazz, Activity activity, Serializable serialize) {
+	public static void startActivityWithSerialize(Activity activity,Class<?> clazz, Serializable serialize) {
 		Intent intent = new Intent(activity, clazz);
 		Bundle bundle = new Bundle();
 		bundle.putSerializable("Serialize", serialize);
@@ -51,7 +51,7 @@ public class ActivityStartUtil {
 		//这里添加动画
 	}
 
-	public static void startActivityWithParcelable(Class<?> clazz, Activity activity, Parcelable parcelable) {
+	public static void startActivityWithParcelable( Activity activity, Class<?> clazz, Parcelable parcelable) {
 		Intent intent = new Intent(activity, clazz);
 		Bundle bundle = new Bundle();
 		bundle.putParcelable("Parcelable", parcelable);

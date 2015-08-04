@@ -4,7 +4,7 @@ import com.lidroid.xutils.HttpUtils;
 
 import cn.caregg.o2o.business.app.BusinessApplication;
 import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
-import cn.caregg.o2o.business.engine.http.task.UserTask;
+import cn.caregg.o2o.business.engine.http.task.BusinessTask;
 import android.test.AndroidTestCase;
 
 public class TestUserTask extends AndroidTestCase {
@@ -21,7 +21,7 @@ public class TestUserTask extends AndroidTestCase {
 	
 //	测试登录
 	public void login(){
-		new UserTask().login("13501015801","123456", new RequestCallBackString(){
+		new BusinessTask().login("13501015801","123456", new RequestCallBackString(){
 
 			@Override
 			public void onSuccess(String result) {
@@ -38,7 +38,7 @@ public class TestUserTask extends AndroidTestCase {
 	}
 //	测试重置
 	public void resetPwd(){
-		new UserTask().forgetPwd("13501015801", "9245", "123456", "123456", new RequestCallBackString() {
+		new BusinessTask().forgetPwd("13501015801", "9245", "123456", "123456", new RequestCallBackString() {
 			
 			@Override
 			public void onSuccess(String data) {
@@ -53,7 +53,7 @@ public class TestUserTask extends AndroidTestCase {
 	}
 //	测试发送短信
 	public void sendSMS(){
-		new UserTask().sendSMS("13501015801",  new RequestCallBackString() {
+		new BusinessTask().sendSMS("13501015801",  new RequestCallBackString() {
 			@Override
 			public void onSuccess(String data) {
 				System.out.println(data);

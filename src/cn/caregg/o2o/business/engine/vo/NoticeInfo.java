@@ -1,5 +1,8 @@
 package cn.caregg.o2o.business.engine.vo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 /**
  * @ClassName: NoticeInfo
  * @Description: TODO   通知信息
@@ -8,7 +11,7 @@ package cn.caregg.o2o.business.engine.vo;
  * 
 */
 
-public class NoticeInfo {
+public class NoticeInfo implements Parcelable{
 
 //	是否已读(0 未读1 已读)
 	private String noticeInfoStatus;
@@ -27,6 +30,24 @@ public class NoticeInfo {
 	
 //	事件消息内容(商家)
 	private String noticeInfoContent2;
+	
+	
+	
+	
+	public NoticeInfo(){};
+	
+
+	public NoticeInfo(String noticeInfoStatus, String noticeInfoSeq,
+		String noticeInfoTitle, String noticeTypeSeq, Long noticeInfoTime,
+		String noticeInfoContent2) {
+		super();
+		this.noticeInfoStatus = noticeInfoStatus;
+		this.noticeInfoSeq = noticeInfoSeq;
+		this.noticeInfoTitle = noticeInfoTitle;
+		this.noticeTypeSeq = noticeTypeSeq;
+		this.noticeInfoTime = noticeInfoTime;
+		this.noticeInfoContent2 = noticeInfoContent2;
+	}
 
 	public String getNoticeInfoStatus() {
 		return noticeInfoStatus;
@@ -83,6 +104,40 @@ public class NoticeInfo {
 				+ noticeInfoTitle + ", noticeTypeSeq=" + noticeTypeSeq
 				+ ", noticeInfoTime=" + noticeInfoTime
 				+ ", noticeInfoContent2=" + noticeInfoContent2 + "]";
+	}
+
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+
+	public static final Parcelable.Creator<NoticeInfo> CREATOR = new Creator<NoticeInfo>() {
+		
+		@Override
+		public NoticeInfo[] newArray(int size) {
+			return new NoticeInfo[size];
+		}
+		
+		
+		//反序列化
+		@Override
+		public NoticeInfo createFromParcel(Parcel source) {
+			return new NoticeInfo(source.readString(), source.readString(),
+								source.readString(), source.readString(),
+								source.readLong(), source.readString());
+		}
+	};
+	
+	
+	//序列化
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(noticeInfoStatus);
+		dest.writeString(noticeInfoSeq);
+		dest.writeString(noticeInfoTitle);
+		dest.writeString(noticeTypeSeq);
+		dest.writeLong(noticeInfoTime);
+		dest.writeString(noticeInfoContent2);
 	}
 	
 	

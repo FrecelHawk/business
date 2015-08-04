@@ -23,7 +23,7 @@ public class ResultPaser {
 		return parse.paserObject(result, clazz);
 	}
 	
-	public static <E> E  paserObject(Object result,TypeToken<E> typeToken){
+	public static <E> E  paserCollection(Object result,TypeToken<E> typeToken){
 		return parse.paserCollection(result, typeToken);
 	}
 	
