@@ -38,6 +38,12 @@
         <activity android:name="cn.caregg.o2o.business.ui.activity.NoticeDetailActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.UserSearchActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.UserDetailActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.AccessInfo"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessTimeActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessEnvironment"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.BusinessDesribeActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.ModityContactActivity"></activity>
+        
     </application>
     <instrumentation 
         android:name="android.test.InstrumentationTestRunner"
