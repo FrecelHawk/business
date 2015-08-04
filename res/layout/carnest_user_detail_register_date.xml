@@ -3,21 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingTop="10dp"
-    android:paddingBottom="10dp"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:ignore="RtlHardcoded" >
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="10dp"
+    tools:ignore="RtlHardcoded,RtlSymmetry" >
 
-    <include
-        android:layout_width="wrap_content"
+    <include 
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        layout="@layout/carnest_common_txt_bar_notline" />
-    
-    <include
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        layout="@layout/carnest_common_txt_bar_notline" />
+        layout="@layout/carnest_user_detail_plate_number"/>
 
 </LinearLayout>

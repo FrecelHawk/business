@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="10"
+    android:orientation="horizontal" >
+
+    <cn.caregg.o2o.business.ui.view.ClearEditText
+        android:id="@+id/clearEditText1"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/clear_normal_list"
+        android:drawableRight="@drawable/clear_normal_list"
+        android:hint="车牌号/手机号"
+        android:layout_weight="8"
+        tools:ignore="HardcodedText" >
+
+        <requestFocus />
+    </cn.caregg.o2o.business.ui.view.ClearEditText>
+
+
+
+    <TextView
+        android:id="@+id/search"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:text="搜索"
+        android:textColor="@color/blue"
+        tools:ignore="HardcodedText" />
+
+</LinearLayout>

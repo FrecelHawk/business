@@ -7,27 +7,23 @@
     android:orientation="vertical" >
 
     <include
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/carnest_top_navigation" />
 
-    <cn.caregg.o2o.business.ui.view.ClearEditText
-        android:id="@+id/clearEditText1"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/white"
-        android:hint="车牌号/手机号"
-        tools:ignore="HardcodedText" >
+   <include 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       layout="@layout/carnest_user_search_bar"/>
 
-        <requestFocus />
-    </cn.caregg.o2o.business.ui.view.ClearEditText>
-
-    <ListView
-        android:id="@+id/listView1"
+    <cn.caregg.o2o.business.ui.view.CommonListView 
+        android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_marginTop"
-        android:background="@color/white" >
-    </ListView>
+        android:background="@color/white">
+        
+    </cn.caregg.o2o.business.ui.view.CommonListView>
 
 </LinearLayout>

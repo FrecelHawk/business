@@ -8,6 +8,7 @@
     android:orientation="vertical" >
  
     <include 
+        android:id="@+id/navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         layout="@layout/carnest_news_notice_navigation"/>
@@ -20,14 +21,14 @@
         android:layout_height="50dp"
         layout="@layout/carnest_news_item"/> -->
     
-    <ListView 
+    <cn.caregg.o2o.business.ui.view.CommonListView 
         android:layout_marginTop="@dimen/activity_marginTop"
         android:id="@+id/listView"
         android:background="@color/white"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:padding="15dp"
         >
-        
-    </ListView>
+    </cn.caregg.o2o.business.ui.view.CommonListView>
 
 </LinearLayout>

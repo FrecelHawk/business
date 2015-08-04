@@ -28,7 +28,9 @@
     <cn.caregg.o2o.business.ui.view.CommonListView
         android:id="@+id/commonListView1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+         >
     </cn.caregg.o2o.business.ui.view.CommonListView>
  
 </LinearLayout>

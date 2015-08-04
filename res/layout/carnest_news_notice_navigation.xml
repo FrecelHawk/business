@@ -10,7 +10,7 @@
         layout="@layout/carnest_top_navigation" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/falg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
