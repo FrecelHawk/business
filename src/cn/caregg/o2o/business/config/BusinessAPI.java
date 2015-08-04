@@ -65,6 +65,7 @@ public class BusinessAPI {
 //	查看用户详情
 	public static String FIND_CAROWNER_BY_SEQ = getRequestUrl("org/findCarOwnerBySeq");
 	
+	public static String  FEEDBACK = getRequestUrl("org/feedback");
 	/**
 	 *  页面请求
 	 * **/
