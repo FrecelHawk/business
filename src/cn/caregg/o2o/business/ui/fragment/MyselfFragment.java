@@ -4,8 +4,11 @@ package cn.caregg.o2o.business.ui.fragment;
 import cn.caregg.o2o.business.R;
 import cn.caregg.o2o.business.config.ConstantValues;
 import cn.caregg.o2o.business.engine.page.constant.MyselfFragmentConstant;
+import cn.caregg.o2o.business.ui.activity.AccessInfo;
 import cn.caregg.o2o.business.ui.activity.BusinessInfoActivity;
+import cn.caregg.o2o.business.ui.activity.NoticeActivity;
 import cn.caregg.o2o.business.ui.activity.SuggestionFeedbackActivity;
+import cn.caregg.o2o.business.ui.activity.UserSearchActivity;
 import cn.caregg.o2o.business.ui.base.BaseFragment;
 import cn.caregg.o2o.business.utils.ActivityStartUtil;
 import cn.caregg.o2o.business.utils.PhoneUtil;
@@ -108,9 +111,15 @@ public class MyselfFragment extends BaseFragment {
 			case R.id.business_head:
 				  ActivityStartUtil.start(getActivity(), BusinessInfoActivity.class);
 				break;
+			case R.id.select_tab1:
+				  ActivityStartUtil.start(getActivity(), NoticeActivity.class);break;
+			case R.id.select_tab3:
+				  ActivityStartUtil.start(getActivity(),UserSearchActivity.class);break;
 			case R.id.select_tab4:
 				  ActivityStartUtil.start(getActivity(), SuggestionFeedbackActivity.class);
 				   break;
+			case R.id.select_tab5:
+				  ActivityStartUtil.start(getActivity(), AccessInfo.class);break;
 			default:
 				break;
 			}
