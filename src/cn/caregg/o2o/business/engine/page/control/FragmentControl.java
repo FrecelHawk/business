@@ -58,4 +58,5 @@ public class FragmentControl {
 	public static synchronized void  showFragment(BaseFragmentActivity activity,Class<?> clazz){
 		 fragment.showFragment(activity, clazz);
 	}
+	
 }

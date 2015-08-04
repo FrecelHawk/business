@@ -49,7 +49,7 @@ public class TestActivity extends BaseActivity implements IXListViewListener{
 	@SuppressWarnings("unchecked")
 	private void testAPI() {
 //		testdata();
-		ActivityStartUtil.start(TestActivity.this, NavigationManagerActivity.class);
+		ActivityStartUtil.start(TestActivity.this, LoginActivity.class);
 	}
 
 

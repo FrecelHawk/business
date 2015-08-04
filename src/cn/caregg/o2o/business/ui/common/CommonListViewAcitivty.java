@@ -48,6 +48,7 @@ public abstract class CommonListViewAcitivty extends BaseActivity implements IXL
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		registerBroadcast();
 	}
 	
 	
@@ -66,7 +67,6 @@ public abstract class CommonListViewAcitivty extends BaseActivity implements IXL
 		listView.setXListViewListener(this);
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new ItemClick());
-		registerBroadcast();
 		pullData(page);
 	}
 

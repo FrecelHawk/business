@@ -2,10 +2,13 @@ package cn.caregg.o2o.business.ui.activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.app.BusinessApplication;
+import cn.caregg.o2o.business.engine.page.constant.AccessInfoConstanct;
 import cn.caregg.o2o.business.engine.page.control.NavigationControl;
 import cn.caregg.o2o.business.engine.page.impl.NavigationBar;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
@@ -21,8 +24,6 @@ import com.lidroid.xutils.view.annotation.ViewInject;
 @ContentView(R.layout.carnest_account_number_info)
 public class AccessInfo extends BaseActivity {
 
-	
-	private int[]  images = {R.drawable.carnest_access_phone,R.drawable.carnest_access_pwd,R.drawable.carnest_access_update};
 	
 	@ViewInject(R.id.navigation)
 	private ViewGroup  navigation;
@@ -43,31 +44,64 @@ public class AccessInfo extends BaseActivity {
 
 
 	public void initView() {
-		ViewGroup tab1 = (ViewGroup) findViewById(R.id.tab1);
-		ViewGroup tab2 = (ViewGroup) findViewById(R.id.tab2);
-		ViewGroup tab3 = (ViewGroup) findViewById(R.id.tab3);
+		for(int i=0;i<AccessInfoConstanct.tabs.length;i++)
+			           setTab(i);
+		
+		((TextView)findViewById(R.id.tab1)
+				  .findViewById(R.id.textView3)).setText("当前已是最新版本");
+	}
 
-		((TextView)tab1.findViewById(R.id.textView3)).setText("当前已是最新版本");
-		((ImageView)tab1.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(images[2]));
-		((TextView)tab1.findViewById(R.id.textView1)).setText("版本信息");
-		
-		((TextView)tab2.findViewById(R.id.textView1)).setText("绑定手机");
-		((ImageView)tab2.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(images[0]));
-		
-		((TextView)tab3.findViewById(R.id.textView1)).setText("修改密码");
-		((ImageView)tab3.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(images[1]));
+
+	public void setTab(int i) {
+		ViewGroup tab = (ViewGroup) findViewById(AccessInfoConstanct.tabs[i]);
+		((ImageView)tab.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(AccessInfoConstanct.images[i]));
+		((TextView)tab.findViewById(R.id.textView1)).setText(AccessInfoConstanct.txts[i]);
+		tab.setOnClickListener(new SeleteListener());
 	}
 	
 	
 	public void outlogin(View view){
 		ToastUtil.shortShow(AccessInfo.this, "退出");
-		ActivityStartUtil.start(AccessInfo.this, LoginActivity.class);
 		DelayedHandler.execute(new Runnable() {
-			
 			@Override
 			public void run() {
-                   finish();				
+				ActivityStartUtil.start(AccessInfo.this, LoginActivity.class);
+                   
 			}
 		}, 2000);
+	}
+	
+	
+	private class SeleteListener  implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.tab1:
+				 update();
+				break;
+			case R.id.tab2:
+				 bindingPhone();
+				break;
+			case R.id.tab3:
+				 modifyPwd();
+				break;
+			default:
+				break;
+			}
+		}
+		
+	}
+	
+	public void update(){
+		ToastUtil.shortShow(AccessInfo.this, "更新");
+	}
+	
+	public void bindingPhone(){
+		ActivityStartUtil.start(AccessInfo.this, BindingPhoneAcitivity.class);
+	}
+	
+	public void modifyPwd(){
+		ActivityStartUtil.start(AccessInfo.this, RestPasswdActivity.class);
 	}
 }

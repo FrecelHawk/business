@@ -1,6 +1,5 @@
 package cn.caregg.o2o.business.ui.activity;
 
-import javax.swing.text.html.InlineView;
 
 import android.os.Bundle;
 import android.view.View;

@@ -77,6 +77,11 @@ public class NoticeNavigationBar implements NavigationInf {
      		}
 		
 	}
+	
+	public  void setRightTv(String str){
+		this.rightTV.setText(str);
+	}
+	
 
 	public void onClick(OnClickListener clickListener) {
 		 rightTV.setOnClickListener(clickListener);

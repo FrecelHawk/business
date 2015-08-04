@@ -133,4 +133,12 @@ public class UserSearchActivity extends CommonListViewAcitivty{
 		ToastUtil.shortShow(UserSearchActivity.this, "测试");
 	}
 	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		list = null;
+		adapter = null;
+	}
+	
 }

@@ -51,4 +51,9 @@ public class NavigationControl {
 		return this;
 	}
 	
+	public NavigationControl  noticeNavigationRightTv(String str){
+		((NoticeNavigationBar)navigationInf).setRightTv(str);
+		return this;
+	}
+	
 }

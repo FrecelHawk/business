@@ -48,7 +48,7 @@ public class ForgetPasswdActivity extends BaseActivity {
 	@ViewInject(R.id.confirm)
 	private Button confirm;
 	
-	@ViewInject(R.id.button1)
+	@ViewInject(R.id.getcode)
 	private Button checkBut;
 	
 	@ViewInject(R.id.navigation)

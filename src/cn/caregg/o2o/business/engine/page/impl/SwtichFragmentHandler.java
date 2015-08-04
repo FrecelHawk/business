@@ -3,6 +3,7 @@ package cn.caregg.o2o.business.engine.page.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import cn.caregg.o2o.business.R;
@@ -42,13 +43,14 @@ public class SwtichFragmentHandler implements SwtichFragment {
      }
      
      
+     
     /**
      * 每次使用Replace的时候，Fragment都会重新实例化，重新加载一边数据
      * */
     public void showFragment(BaseFragmentActivity activity,Class<?> fragment){
-    	FragmentTransaction transaction = getTransaction(activity);
+      	FragmentTransaction transaction = getTransaction(activity);
 		transaction.replace(TAB_CONTENT,
-				fragments.get(fragment.getSimpleName())).commit();
+				fragments.get(fragment.getSimpleName())).commitAllowingStateLoss();
     	
     } 
      
@@ -65,10 +67,11 @@ public class SwtichFragmentHandler implements SwtichFragment {
 	 * */
 	public void swtich(BaseFragmentActivity  activity,BaseFragment before,BaseFragment alter) {
 		if(null==before||null==alter||before.equals(alter)) return ;
-		FragmentTransaction transaction = getTransaction(activity);
+		FragmentManager manager = activity.getSupportFragmentManager();
+		FragmentTransaction transaction = getTransaction(manager);
 		transaction.hide(before);
 		if(!alter.isAdded())
-			  transaction.add(TAB_CONTENT, alter);
+			  transaction.add(TAB_CONTENT, alter,alter.getClass().getSimpleName());
 		   else
 		  	  transaction.show(alter);
 		transaction.commitAllowingStateLoss();
@@ -77,9 +80,18 @@ public class SwtichFragmentHandler implements SwtichFragment {
 
 	private FragmentTransaction getTransaction(BaseFragmentActivity activity) {
 		FragmentManager fragmentManager = activity.getSupportFragmentManager();
+		return getTransaction(fragmentManager);
+	}
+
+
+	public FragmentTransaction getTransaction(FragmentManager fragmentManager) {
 		FragmentTransaction transaction = fragmentManager.beginTransaction().setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out);
 		return transaction;
 	}
+	
+	
+	
+	
 
     
 }

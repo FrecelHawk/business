@@ -107,7 +107,8 @@ public class LoginActivity extends BaseActivity {
 	
 	
 	public void login(View view){
-		new BusinessTask().login(phone.getText().toString(),
+		ActivityStartUtil.start(LoginActivity.this,NavigationManagerActivity.class);
+		/*new BusinessTask().login(phone.getText().toString(),
 				             passwd.getText().toString(), 
 				             new RequestCallBackString() {
 			
@@ -116,14 +117,13 @@ public class LoginActivity extends BaseActivity {
 				if(!StringUtils.isEmpty(data)){
 					executeLogin(data);
 				}
-				
 			}
 
 			@Override
 			public void filterFailureMsg(String failureMsg) {
 				LogUtils.e(failureMsg);
 			}
-		});
+		});*/
 	};
 	
 	

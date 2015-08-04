@@ -36,12 +36,12 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
    @ViewInject(R.id.top_navigation)
    private ViewGroup  navigation;
    
-   private int oldIndex=0;
+   private volatile int oldIndex=0;
    
    private NavigationControl navigationControl;
    
    @ViewInject(R.id.bottom_navigation_layout)
-   private ViewGroup  bottomNavigationLyaout;
+   private volatile ViewGroup  bottomNavigationLyaout;
    
 
    private List<TextView>  tabs = new ArrayList<TextView>();
@@ -56,7 +56,6 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 		     .setNavigationInf(new NavigationBar(navigation,NavigationManagerActivity.this))
 		     .setTitle("主页")
 		     .hideArrow();
-		System.out.println("test");
 	}
 
 
@@ -71,11 +70,13 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 		}
 		defaultSet();
 	}
+	
 
 
 	private void defaultSet() {
 		defaultInitialFragment();
 		touchTab(oldIndex);
+        homeStyle();
 	}
 
 
@@ -137,8 +138,7 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 					  setTile(index);
 					  switchFragment(index);
 					  if(index==0){
-						    setBottomNavigationBackground(R.color.navigation_bottom_blue);
-							changeNavigationNormalImg(NavigationConstant.navigationStillTabs);
+						    homeStyle();
 							oldIndex = 0;
 							 return;
 					  }else{
@@ -150,9 +150,6 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 					   
 			 }
 		}
-
-	
-
 
 		
 	};
@@ -192,4 +189,20 @@ public class NavigationManagerActivity extends BaseFragmentActivity {
 	}
 	
 	
+	/** 
+	 * @author FH
+	 * @Description: TODO void   主页样式
+	 * @throws:throws
+	*/ 
+	
+	public void homeStyle() {
+		setBottomNavigationBackground(R.color.navigation_bottom_blue);
+		changeNavigationNormalImg(NavigationConstant.navigationStillTabs);
+	}
+	
+	@Override
+		protected void onDestroy() {
+			// TODO Auto-generated method stub
+			super.onDestroy();
+		}
 }
