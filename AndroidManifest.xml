@@ -34,7 +34,10 @@
         <activity android:name="cn.caregg.o2o.business.ui.activity.RestPasswdActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.ForgetPasswdActivity"></activity>
         <activity android:name="cn.caregg.o2o.business.ui.activity.SuggestionFeedbackActivity"></activity>
-        
+        <activity android:name="cn.caregg.o2o.business.ui.activity.NoticeActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.NoticeDetailActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.UserSearchActivity"></activity>
+        <activity android:name="cn.caregg.o2o.business.ui.activity.UserDetailActivity"></activity>
     </application>
     <instrumentation 
         android:name="android.test.InstrumentationTestRunner"
