@@ -1,5 +1,7 @@
 package cn.caregg.o2o.business.engine.vo;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 
 /**
  * @ClassName: UserInfo
@@ -9,7 +11,7 @@ package cn.caregg.o2o.business.engine.vo;
  * 
 */
 
-public class UserInfo {
+public class UserInfo implements Parcelable{
 
 //	车牌号
 	private String carId;
@@ -48,6 +50,11 @@ public class UserInfo {
 	private String sumPrice;
 
 
+	@Override
+	public int describeContents() {
+		return 0;
+	}
+	
 	
 	
 
@@ -72,54 +79,54 @@ public UserInfo(String carId, String ownerTel, String carOwnerPic,
 
 
 
-//
-////	序列化
-//	@Override
-//	public void writeToParcel(Parcel dest, int flags) {
-//		dest.writeString(carId);
-//		dest.writeString(ownerTel);
-//		dest.writeString(carOwnerPic);
-//		dest.writeString(carOwnerSeq);
-//		dest.writeString(ownerNickName);
-//		if(null!=lastLoginTime)
-//		    dest.writeLong(lastLoginTime);
-//		dest.writeString(carMakerName);
-//		dest.writeString(carBrandName);
-//		dest.writeString(ownerName);
-//		dest.writeString(countOder);
-//		if(null!=ownerCreateTime)
-//		    dest.writeLong(ownerCreateTime);
-//		dest.writeString(sumPrice);
-//	}
 
-//	public static final Parcelable.Creator<UserInfo> CREATOR = new Creator<UserInfo>() {
-//
-//		//反序列化
-//		@Override
-//		public UserInfo createFromParcel(Parcel source) {
-//			UserInfo  user = new UserInfo();
-//			user.setCarId(source.readString());
-//			user.setOwnerTel(source.readString());
-//			user.setCarOwnerPic(source.readString());
-//			user.setCarOwnerSeq(source.readString());
-//			user.setOwnerNickName(source.readString());
-//			user.setLastLoginTime(source.readLong());
-//			user.setCarMakerName(source.readString());
-//			user.setCarBrandName(source.readString());
-//			user.setOwnerName(source.readString());
-//			user.setCountOder(source.readString());
-//			user.setOwnerCreateTime(source.readLong());
-//			user.setSumPrice(source.readString());
-//			return user;
-//		}
-//
-//		@Override
-//		public UserInfo[] newArray(int size) {
-//			return new UserInfo[size];
-//		}
-//
-//	};
-//	
+//	序列化
+	@Override
+	public void writeToParcel(Parcel dest, int flags) {
+		dest.writeString(carId);
+		dest.writeString(ownerTel);
+		dest.writeString(carOwnerPic);
+		dest.writeString(carOwnerSeq);
+		dest.writeString(ownerNickName);
+		if(null!=lastLoginTime)
+		    dest.writeLong(lastLoginTime);
+		dest.writeString(carMakerName);
+		dest.writeString(carBrandName);
+		dest.writeString(ownerName);
+		dest.writeString(countOder);
+		if(null!=ownerCreateTime)
+		    dest.writeLong(ownerCreateTime);
+		dest.writeString(sumPrice);
+	}
+
+	public static final Parcelable.Creator<UserInfo> CREATOR = new Creator<UserInfo>() {
+
+		//反序列化
+		@Override
+		public UserInfo createFromParcel(Parcel source) {
+			UserInfo  user = new UserInfo();
+			user.setCarId(source.readString());
+			user.setOwnerTel(source.readString());
+			user.setCarOwnerPic(source.readString());
+			user.setCarOwnerSeq(source.readString());
+			user.setOwnerNickName(source.readString());
+			user.setLastLoginTime(source.readLong());
+			user.setCarMakerName(source.readString());
+			user.setCarBrandName(source.readString());
+			user.setOwnerName(source.readString());
+			user.setCountOder(source.readString());
+			user.setOwnerCreateTime(source.readLong());
+			user.setSumPrice(source.readString());
+			return user;
+		}
+
+		@Override
+		public UserInfo[] newArray(int size) {
+			return new UserInfo[size];
+		}
+
+	};
+	
 	public UserInfo(){};
 	
 
@@ -171,6 +178,9 @@ public UserInfo(String carId, String ownerTel, String carOwnerPic,
 		this.lastLoginTime = lastLoginTime;
 	}
 
+	public static Parcelable.Creator<UserInfo> getCreator() {
+		return CREATOR;
+	}
 
 	public String getCarMakerName() {
 		return carMakerName;

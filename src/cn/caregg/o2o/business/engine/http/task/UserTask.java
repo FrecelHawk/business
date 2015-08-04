@@ -25,4 +25,9 @@ public class UserTask {
 	public <E> void  findCarOwnerBySeq(String carOwnerSeq,String serviceOrgSeq, BaseRequestCallBack<E> callBack){
 		new BaseRequestHandler().send(BusinessAPI.FIND_CAROWNER_BY_SEQ, HttpMethod.POST,UserRequestParameter.findCarOwnerBySeq(carOwnerSeq, serviceOrgSeq),callBack);
 	}
+	
+	
+	public <E> void  feedback(String serviceUserSeq, String feedbackContent, String feedbackType,BaseRequestCallBack<E> callBack){
+		new BaseRequestHandler().send(BusinessAPI.FEEDBACK, HttpMethod.POST,UserRequestParameter.feedback(serviceUserSeq, feedbackContent, feedbackType),callBack);
+	}
 }
