@@ -57,6 +57,21 @@
            <item >美容商品</item>
            <item >保养商品</item>
       </string-array>
-           <string name="plase_inputdata">请输入数据</string>
-           <string name="save">保存</string>
+      <string-array name="envrionment_tabTxts">
+           <item >休息室</item>
+           <item >免费茶饮</item>
+           <item >免费wifi</item>
+           <item >专人接待</item>
+           <item >电脑上网</item>
+           <item >专用停车</item>
+           <item >电视</item>
+      </string-array>
+      <string-array name="accessInfo_tabTxts">
+            <item >版本信息</item>
+            <item >绑定手机</item>
+            <item >修改密码</item>
+      </string-array>
+      
+      <string name="plase_inputdata">请输入数据</string>
+      <string name="save">保存</string>
 </resources>

@@ -14,7 +14,7 @@
         layout="@layout/carnest_common_modify_bar2" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/getcode"
         android:layout_width="0dp"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
