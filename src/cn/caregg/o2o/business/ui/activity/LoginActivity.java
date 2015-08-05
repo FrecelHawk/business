@@ -14,11 +14,13 @@ import cn.caregg.o2o.business.engine.domain.Business;
 import cn.caregg.o2o.business.engine.http.callback.RequestCallBackString;
 import cn.caregg.o2o.business.engine.http.task.BusinessTask;
 import cn.caregg.o2o.business.engine.parse.ResultPaser;
+import cn.caregg.o2o.business.engine.vo.MainPage;
 import cn.caregg.o2o.business.ui.base.BaseActivity;
 import cn.caregg.o2o.business.utils.ActivityStartUtil;
 import cn.caregg.o2o.business.utils.PhoneUtil;
 import cn.caregg.o2o.business.utils.ResourceUtils;
 import cn.caregg.o2o.business.utils.StringUtils;
+import cn.caregg.o2o.business.utils.ToastUtil;
 import cn.caregg.o2o.business.utils.ValidityUtil;
 
 import com.lidroid.xutils.ViewUtils;
@@ -95,7 +97,7 @@ public class LoginActivity extends BaseActivity {
 				Toast.makeText(LoginActivity.this,
 								business.getMessage(), Toast.LENGTH_SHORT)
 								.show();
-				ActivityStartUtil.start(LoginActivity.this,NavigationManagerActivity.class);
+			    getMain(business.getServiceOrgSeq());
 				  return ;
 		}
 		Toast.makeText(LoginActivity.this,
@@ -107,8 +109,8 @@ public class LoginActivity extends BaseActivity {
 	
 	
 	public void login(View view){
-		ActivityStartUtil.start(LoginActivity.this,NavigationManagerActivity.class);
-		/*new BusinessTask().login(phone.getText().toString(),
+//		ActivityStartUtil.start(LoginActivity.this,NavigationManagerActivity.class);
+		new BusinessTask().login(phone.getText().toString(),
 				             passwd.getText().toString(), 
 				             new RequestCallBackString() {
 			
@@ -123,8 +125,29 @@ public class LoginActivity extends BaseActivity {
 			public void filterFailureMsg(String failureMsg) {
 				LogUtils.e(failureMsg);
 			}
-		});*/
+		});
 	};
+	
+	
+	public void getMain(String serviceOrgSeq){
+		new BusinessTask().mainPage(serviceOrgSeq, new RequestCallBackString() {
+			
+			@Override
+			public void onSuccess(String data) {
+				if(!StringUtils.isEmpty(data)){
+					BusinessApplication.mainPage  = ResultPaser.paserObject(data, MainPage.class);
+					ActivityStartUtil.start(LoginActivity.this, NavigationManagerActivity.class);
+				}else{
+					ToastUtil.shortShow(LoginActivity.this, "网络异常");
+				}
+			}
+			
+			@Override
+			public void filterFailureMsg(String failureMsg) {
+				ToastUtil.shortShow(LoginActivity.this, failureMsg);
+			}
+		});
+	}
 	
 	
 	public void forgetPasswd(View view){

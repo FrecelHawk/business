@@ -39,4 +39,11 @@ public class BusinessRequestParameter extends BaseRequestParameter {
 		map.put("telephone", telephone);
 		return map;
 	}
+	
+	
+	public static Map<String,String>  getMainPage(String serviceOrgSeq){
+		Map<String, String> map = getMap();
+		map.put("serviceOrgSeq", serviceOrgSeq);
+		return map;
+	}
 }

@@ -64,8 +64,11 @@ public class BusinessAPI {
 	public static String FIND_CAR_OWNER  =getRequestUrl("org/findCarOwner");
 //	查看用户详情
 	public static String FIND_CAROWNER_BY_SEQ = getRequestUrl("org/findCarOwnerBySeq");
-	
+//	意见反馈
 	public static String  FEEDBACK = getRequestUrl("org/feedback");
+//	首页
+	public static String  MAINPAGE = getRequestUrl("org/countNumber");
+	
 	/**
 	 *  页面请求
 	 * **/

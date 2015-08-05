@@ -6,6 +6,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import cn.caregg.o2o.business.engine.domain.Business;
+import cn.caregg.o2o.business.engine.vo.MainPage;
 
 import com.lidroid.xutils.HttpUtils;
 
@@ -34,6 +35,8 @@ public class BusinessApplication extends Application {
 	
 	public static Business business;
 	
+	public static MainPage mainPage;
+	
 	@Override
 	public void onCreate() {
 		// TODO Auto-generated method stub
@@ -42,6 +45,7 @@ public class BusinessApplication extends Application {
 		mHttpUtils = new HttpUtils();
 		releaseList = new LinkedList<String>();
 		business = new Business();
+		mainPage = new MainPage();
 	}
 	
 	

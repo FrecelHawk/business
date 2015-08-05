@@ -1,5 +1,8 @@
 package cn.caregg.o2o.business.ui.fragment;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 import cn.caregg.o2o.business.R;
+import cn.caregg.o2o.business.app.BusinessApplication;
 import cn.caregg.o2o.business.engine.page.constant.MainPageFragmentConstant;
 import cn.caregg.o2o.business.engine.page.constant.NavigationConstant;
 import cn.caregg.o2o.business.ui.activity.NavigationManagerActivity;
@@ -40,9 +44,8 @@ public class MainPageFragment extends BaseFragment {
 	
 //	评论数
 	private int  commentNumber=14;
-
 	
-	
+	private List<String> data = new ArrayList<String>();
 
 	
 	@Override
@@ -51,6 +54,8 @@ public class MainPageFragment extends BaseFragment {
 		view = inflater.inflate(R.layout.carnest_business_main, null);
 		
 		head = (ViewGroup) view.findViewById(R.id.main_head);
+		
+		fullData();
 		
 	    initialOrderBar();
 		
@@ -83,9 +88,9 @@ public class MainPageFragment extends BaseFragment {
 		ViewGroup right = (ViewGroup) orderBar.findViewById(R.id.right);
 		
 		((TextView)left.findViewById(R.id.textView1)).setTextColor(ResourceUtils.getColor(R.color.main_order_font));
-		((TextView)left.findViewById(R.id.textView1)).setText("16");
+		((TextView)left.findViewById(R.id.textView1)).setText(BusinessApplication.mainPage.getSuspendOrderNumber());
 		right.setBackgroundResource(R.drawable.right_circle);
-		((TextView)right.findViewById(R.id.textView1)).setText("18");
+		((TextView)right.findViewById(R.id.textView1)).setText(BusinessApplication.mainPage.getTodayOrderNumber());
 		((TextView)right.findViewById(R.id.textView2)).setText("今日订单");
 	}
 
@@ -94,8 +99,20 @@ public class MainPageFragment extends BaseFragment {
 			  ViewGroup viewGroup = (ViewGroup) view.findViewById(MainPageFragmentConstant.tabs[i]);
 			  ((ImageView)viewGroup.findViewById(R.id.imageView1)).setImageDrawable(ResourceUtils.getDrawable(MainPageFragmentConstant.imgTabs[i]));
 			  ((TextView)viewGroup.findViewById(R.id.textView1)).setText(MainPageFragmentConstant.tabTxt[i]);
+			  ((TextView)viewGroup.findViewById(R.id.textView2)).setText(data.get(i));
 			  viewGroup.setOnClickListener(new SeleteListener());
 		}
+
+	}
+
+
+
+	public void fullData() {
+		data.add(BusinessApplication.mainPage.getYesterdayMoney());
+		data.add(BusinessApplication.mainPage.getThisWeekMoney());
+		data.add(BusinessApplication.mainPage.getDrawingsMoney());
+		for(int i=0;i<3;i++)
+			data.add(BusinessApplication.mainPage.getServiceList().get(i).get("number"));
 	}
 	
 	

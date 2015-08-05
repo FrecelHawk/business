@@ -23,6 +23,7 @@ public class Business {
 //	信息
 	private String message;
 	
+	
 
 	public String getServiceOrgSeq() {
 		return serviceOrgSeq;

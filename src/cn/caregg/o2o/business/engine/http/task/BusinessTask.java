@@ -64,5 +64,19 @@ public class BusinessTask {
 	public <T> void sendSMS(String phone,RequestCallBack<T> callBack){
 		new BaseRequestHandler().send(BusinessAPI.SEND_SMS+"/"+phone,HttpMethod.GET,callBack);
 	}
+	
+	
+	/** 
+	 * @author FH
+	 * @Description: TODO      首页
+	 * @param serviceOrgSeq
+	 * @param serviceUserSeq
+	 * @param callBack void 
+	 * @throws:throws
+	*/ 
+	
+	public <T> void  mainPage(String serviceOrgSeq,RequestCallBack<T> callBack){
+		new BaseRequestHandler().send(BusinessAPI.MAINPAGE,HttpMethod.POST,BusinessRequestParameter.getMainPage(serviceOrgSeq),callBack);
+	}
 }
 
